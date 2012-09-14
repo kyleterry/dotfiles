@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+export TERM='xterm-256color'
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -56,10 +58,10 @@ function make_prompt {
     fi
 
     if [[ `pwd` =~ 'code' ]]; then
-        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_PURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}⚡ ${COLOR_WHITE}"
+        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_PURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
         PS2=" > "
     else
-        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_PURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}⚡ ${COLOR_WHITE}"
+        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_PURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
         PS2=" > "
     fi
 }
@@ -90,3 +92,4 @@ alias pac='sudo pacman'
 alias yao='yaourt'
 
 export WORKON_HOME=~/.virtualenvs
+source `which virtualenvwrapper.sh`
