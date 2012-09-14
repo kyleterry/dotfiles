@@ -1,0 +1,92 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# COLORS: Determine whether we're live in technicolo(u)r
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    technicolor=rainbow
+
+    export CLICOLOR=1
+    export LSCOLORS=gxfxfxfxcxexexbxbxbxbx
+    COLOR_RED="\[\033[01;31m\]"
+    COLOR_GREEN="\[\033[01;32m\]"
+    COLOR_YELLOW="\[\033[01;33m\]"
+    COLOR_BLUE="\[\033[01;34m\]"
+    COLOR_PURPLE="\[\033[01;35m\]"
+    COLOR_CYAN="\[\033[01;36m\]"
+    COLOR_WHITE="\[\033[00m\]"
+
+else
+# Actually, we prefer to trip the fuck out in old school black and white
+    technicolor=
+fi
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+function make_prompt {
+    EXITSTATUS="$?"
+
+    if [ "$EXITSTATUS" -eq "0" ]
+    then
+        STATUS="${COLOR_GREEN}OK"
+    else
+        STATUS="${COLOR_RED}ERR ${EXITSTATUS}"
+    fi
+
+    if [ ${VIRTUAL_ENV} ]; then
+        VE_NAME="${COLOR_CYAN}(`basename ${VIRTUAL_ENV}`)"
+    else
+        VE_NAME=''
+    fi
+
+    VC_PROMPT=$(vcprompt -ANU)
+
+    TOGETHER="${VE_NAME}${VC_PROMPT}"
+
+    BOTTOM_BAR_LEFT="\n${COLOR_PURPLE}["
+    BOTTOM_BAR_RIGHT="${COLOR_PURPLE}]"
+    if [ ${TOGETHER} ]; then
+        BOTTOM_BAR="${BOTTOM_BAR_LEFT} ${VE_NAME}${COLOR_RED}${VC_PROMPT} ${BOTTOM_BAR_RIGHT}"
+    else
+        BOTTOM_BAR=""
+    fi
+
+    if [[ `pwd` =~ 'code' ]]; then
+        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_PURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}⚡ ${COLOR_WHITE}"
+        PS2=" > "
+    else
+        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_PURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}⚡ ${COLOR_WHITE}"
+        PS2=" > "
+    fi
+}
+
+PROMPT_COMMAND=make_prompt
+
+export PATH="~/bin:$PATH"
+export EDITOR="vim"
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# workflow aliases
+alias pac='sudo pacman'
+alias yao='yaourt'
+
+export WORKON_HOME=~/.virtualenvs
