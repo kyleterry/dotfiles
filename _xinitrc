@@ -1,0 +1,10 @@
+#!/bin/sh
+eval `ssh-agent -t 21600`
+urxvtd -q -f -o &
+xrdb -load ~/.Xresources &
+xset fp+ /usr/share/fonts/local/
+xautolock -time 5 -locker "${HOME}/.screenlock.sh" -detectsleep &
+xset fp rehash
+xmodmap ~/.Xmodmap
+dwmstatus &
+exec dbus-launch ssh-agent -- dwm

@@ -29,8 +29,8 @@ nnoremap <leader><space> :nohlsearch<cr> " hide the matches (:noh)
 set cursorline
 set cursorcolumn
 set colorcolumn=79
-highlight CursorColumn ctermbg=0 cterm=NONE
-highlight CursorLine ctermbg=0 cterm=NONE
+"highlight CursorColumn ctermbg=0 cterm=NONE
+"highlight CursorLine ctermbg=0 cterm=NONE
 set ruler
 
 " editing
