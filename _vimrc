@@ -56,6 +56,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " ctrlp
 let g:ctrlp_map = '<leader>f'
+let g:ctrlpbuffer_map = '<leader>b'
 
 " NERDtree
 map <leader>n :NERDTreeToggle<CR>

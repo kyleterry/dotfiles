@@ -100,3 +100,4 @@ alias yao='yaourt'
 
 export WORKON_HOME=~/.virtualenvs
 source `which virtualenvwrapper.sh`
+PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kyle/.gem/ruby/1.9.1/bin
