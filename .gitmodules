@@ -25,3 +25,9 @@
 [submodule "_vim/bundle/lessc"]
 	path = _vim/bundle/lessc
 	url = https://github.com/groenewege/vim-less.git
+[submodule "_vim/bundle/badwolf"]
+	path = _vim/bundle/badwolf
+	url = https://github.com/sjl/badwolf.git
+[submodule "_vim/bundle/fugitive"]
+	path = _vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git

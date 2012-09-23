@@ -98,6 +98,10 @@ alias l='ls -CF'
 alias pac='sudo pacman'
 alias yao='yaourt'
 
+# virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
 source `which virtualenvwrapper.sh`
 PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kyle/.gem/ruby/1.9.1/bin
+
+# django
+export DJANGO_COLORS="error=red/blue,blink;notice=magenta;http_server_error=red,blink"

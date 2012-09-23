@@ -11,6 +11,7 @@ set numberwidth=1
 set title
 set pastetoggle=<F2>
 set confirm
+colorscheme badwolf
 
 " sudo go make me a sandwich
 command! W :w
