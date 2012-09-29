@@ -6,5 +6,6 @@ xset fp+ /usr/share/fonts/local/
 xautolock -time 5 -locker "${HOME}/.screenlock.sh" -detectsleep &
 xset fp rehash
 xmodmap ~/.Xmodmap
+. ~/.monitorsrc
 dwmstatus &
 exec dbus-launch ssh-agent -- dwm
