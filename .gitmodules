@@ -28,3 +28,9 @@
 [submodule "_vim/bundle/fugitive"]
 	path = _vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "_vim/bundle/pylint"]
+	path = _vim/bundle/pylint
+	url = https://github.com/orenhe/pylint.vim.git
+[submodule "_vim/bundle/pyflakes"]
+	path = _vim/bundle/pyflakes
+	url = https://github.com/kevinw/pyflakes-vim.git

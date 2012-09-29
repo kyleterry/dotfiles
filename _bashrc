@@ -103,4 +103,4 @@ export WORKON_HOME=~/.virtualenvs
 source `which virtualenvwrapper.sh`
 
 # django
-export DJANGO_COLORS="error=red/blue,blink;notice=magenta;http_server_error=red,blink"
+export DJANGO_COLORS="error=red,blink;notice=magenta;http_server_error=red,blink"
