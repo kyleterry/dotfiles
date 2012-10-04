@@ -64,6 +64,10 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " ctrlp
 let g:ctrlp_map = '<leader>f'
 map <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn|collected_static)$',
+  \ 'file': '\v\.(exe|so|dll|pyc|swp|swo)$',
+  \ }
 
 " NERDtree
 map <leader>n :NERDTreeToggle<CR>

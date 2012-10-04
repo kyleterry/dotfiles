@@ -1,0 +1,57 @@
+set send_charset="utf-8"
+
+set editor="vim"
+set my_name="Kyle Terry"
+set realname="Kyle Terry"
+bind index "^" imap-fetch-mail
+set header_cache="~/.mutt/hcache"
+set mailcap_path="~/.mutt/mailcap"
+auto_view text/html
+
+set sort=threads
+set sort_browser=date
+set sort_aux=reverse-last-date-received
+
+source "gpg -dq ~/.mail-passwords.gpg |"
+
+set imap_user="kyle@kyleterry.com"
+set imap_pass=$my_pw_kylekyleterrycom
+set folder="imaps://imap.gmail.com/"
+set spoolfile= +INBOX
+
+set smtp_url="smtp://kyle@kyleterry.com@smtp.gmail.com:587/"
+set smtp_pass=$my_pw_kylekyleterrycom
+set from="kyle@kyleterry.com"
+
+# Gmail-style keyboard shortcuts
+macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
+macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[Gmail]/Bin\"\n <delete-message>" "Gmail delete message"
+macro index,pager gl "<change-folder>"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index,pager gk "<change-folder>=Linux Kernel<enter>" "Go to Kernel mailing list"
+macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index,pager gt "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to sent mail"
+# -*-muttrc-*-
+
+# Palette for use with the Linux console.  Black background.
+
+color hdrdefault blue black
+color quoted blue black
+color signature blue black
+color attachment red black
+color message brightred black
+color error brightred black
+color indicator black red
+color status brightgreen blue
+color tree white black
+color normal white black
+color markers red black
+color search white black
+color tilde brightmagenta black
+color index blue black ~F
+color index red black "~N|~O"
+
+# color body brightwhite black '\*+[^*]+\*+'
+# color body brightwhite black '_+[^_]+_+'
