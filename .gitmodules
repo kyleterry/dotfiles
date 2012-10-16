@@ -37,6 +37,6 @@
 [submodule "_vim/bundle/pyflakes"]
 	path = _vim/bundle/pyflakes
 	url = https://github.com/kevinw/pyflakes-vim.git
-[submodule "_vim/bundle/rope"]
-	path = _vim/bundle/rope
-	url = https://github.com/klen/rope-vim.git
+[submodule "_vim/bundle/pythonmode"]
+	path = _vim/bundle/pythonmode
+	url = https://github.com/klen/python-mode.git
