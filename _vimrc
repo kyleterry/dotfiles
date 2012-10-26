@@ -70,7 +70,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " NERDtree
-map <leader>n :NERDTreeToggle<CR>
+map <leader>nt :NERDTreeToggle<CR>
 
 " ack
 nmap <leader>a <Esc>:Ack!
@@ -90,7 +90,11 @@ map <c-h> <c-w>h
 " pyflakes
 let g:pyflakes_use_quickfix = 0
 
+" virtualenv
+let g:pymode_virtualenv = 1
 
+" vim-pad
+let g:pad_dir = '~/Documents/pad'
 
 " based on:
 " http://vim.1045645.n5.nabble.com/editing-Python-files-how-to-keep-track-of-class-membership-td1189290.html
