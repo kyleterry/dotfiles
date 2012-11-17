@@ -8,4 +8,4 @@ xset fp rehash
 xmodmap ~/.Xmodmap
 . ~/.monitorsrc
 dwmstatus &
-exec dbus-launch ssh-agent -- dwm
+exec dbus-launch ssh-agent -- xmonad
