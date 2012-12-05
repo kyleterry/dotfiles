@@ -6,13 +6,14 @@ filetype plugin indent on
 filetype on
 set encoding=utf-8
 set t_Co=256
-set number
+set relativenumber
 set numberwidth=1
 set title
 set pastetoggle=<F2>
 set confirm
 set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set iskeyword-=_
 hi NonText ctermfg=7 guifg=gray
 colorscheme badwolf
 
@@ -101,12 +102,12 @@ let g:pad_dir = '~/Documents/pad'
 
 function! s:get_last_python_class()
     let l:retval = ""
-    let l:last_line_declaring_a_class = search('^\s*class', 'bnW')
+    let l:last_line_declaring_a_class = search('^class', 'bnW')
     let l:last_line_starting_with_a_word_other_than_class = search('^\ \(\<\)\@=\(class\)\@!', 'bnW')
     if l:last_line_starting_with_a_word_other_than_class < l:last_line_declaring_a_class
         let l:nameline = getline(l:last_line_declaring_a_class)
-        let l:classend = matchend(l:nameline, '\s*class\s\+')
-        let l:classnameend = matchend(l:nameline, '\s*class\s\+[A-Za-z0-9_]\+')
+        let l:classend = matchend(l:nameline, 'class\s\+')
+        let l:classnameend = matchend(l:nameline, 'class\s\+[A-Za-z0-9_]\+')
         let l:retval = strpart(l:nameline, l:classend, l:classnameend-l:classend)
     endif
     return l:retval

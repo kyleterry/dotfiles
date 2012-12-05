@@ -68,7 +68,7 @@ function make_prompt {
 
 PROMPT_COMMAND=make_prompt
 
-export PATH="~/bin:$PATH"
+export PATH="~/.cabal/bin:~/bin:$PATH"
 export EDITOR="vim"
 
 if [ -x /usr/bin/dircolors ]; then
@@ -101,7 +101,9 @@ alias yao='yaourt'
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
 source `which virtualenvwrapper.sh`
-PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kyle/.gem/ruby/1.9.1/bin
+PATH=~/.cabal/bin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kyle/.gem/ruby/1.9.1/bin
+
+stty -ixon
 
 # django
 export DJANGO_COLORS="error=red,blink;notice=magenta;http_server_error=red,blink"
