@@ -13,7 +13,6 @@ set pastetoggle=<F2>
 set confirm
 set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-set iskeyword-=_
 hi NonText ctermfg=7 guifg=gray
 colorscheme badwolf
 

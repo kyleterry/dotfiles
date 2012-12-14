@@ -37,3 +37,6 @@
 [submodule "_vim/bundle/pythonmode"]
 	path = _vim/bundle/pythonmode
 	url = https://github.com/klen/python-mode.git
+[submodule "_vim/bundle/todolist"]
+	path = _vim/bundle/todolist
+	url = https://github.com/vim-scripts/todolist.vim.git
