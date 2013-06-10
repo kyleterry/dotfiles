@@ -26,7 +26,7 @@ else
     technicolor=
 fi
 
-alias ls='ls --color=auto'
+alias ls='ls -G'
 PS1='[\u@\h \W]\$ '
 
 function make_prompt {
@@ -45,7 +45,7 @@ function make_prompt {
         VE_NAME=''
     fi
 
-    VC_PROMPT=$(vcprompt -ANU)
+    VC_PROMPT=$(vcprompt)
 
     TOGETHER="${VE_NAME}${VC_PROMPT}"
 
@@ -100,10 +100,21 @@ alias yao='yaourt'
 
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
-source `which virtualenvwrapper.sh`
-PATH=~/.cabal/bin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/kyle/.gem/ruby/1.9.1/bin
+source /usr/local/share/python/virtualenvwrapper.sh
 
 stty -ixon
 
 # django
-export DJANGO_COLORS="error=red,blink;notice=magenta;http_server_error=red,blink"
+export DJANGO_COLORS="error=red;notice=magenta;http_server_error=red"
+
+source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+
+export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source /Users/kyle/.rvm/scripts/rvm
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi

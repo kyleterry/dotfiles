@@ -76,7 +76,7 @@ map <leader>nt :NERDTreeToggle<CR>
 nmap <leader>a <Esc>:Ack!
 
 " powerline
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 " tasklist
 map <leader>td <Plug>TaskList
