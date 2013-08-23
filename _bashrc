@@ -26,10 +26,18 @@ else
     technicolor=
 fi
 
-alias ls='ls -G'
+# History
+shopt -s histappend
+shopt -s cmdhist
+
+export HISTFILE=~/.history/`date +%Y-%m-%d`.hist
+export HISTTIMEFORMAT="%T "
+
 PS1='[\u@\h \W]\$ '
 
 function make_prompt {
+    history -n; history -a
+
     EXITSTATUS="$?"
 
     if [ "$EXITSTATUS" -eq "0" ]
@@ -66,6 +74,7 @@ function make_prompt {
     fi
 }
 
+
 PROMPT_COMMAND=make_prompt
 
 export PATH="~/.cabal/bin:~/bin:$PATH"
@@ -90,6 +99,7 @@ for i in ~/.bash_completion.d/* ; do
 done
 
 # some more ls aliases
+alias ls='ls -G'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
