@@ -46,3 +46,18 @@
 [submodule "_vim/bundle/webapi"]
 	path = _vim/bundle/webapi
 	url = https://github.com/mattn/webapi-vim.git
+[submodule "_vim/bundle/surround"]
+	path = _vim/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "_vim/bundle/repeat"]
+	path = _vim/bundle/repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "_vim/bundle/php"]
+	path = _vim/bundle/php
+	url = https://github.com/madflow/vim-php
+[submodule "_vim/slimv"]
+	path = _vim/slimv
+	url = https://github.com/vim-scripts/slimv.vim.git
+[submodule "_vim/bundle/slimv"]
+	path = _vim/bundle/slimv
+	url = https://github.com/vim-scripts/slimv.vim.git

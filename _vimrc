@@ -96,6 +96,8 @@ let g:pymode_virtualenv = 1
 " vim-pad
 let g:pad_dir = '~/Documents/pad'
 
+let g:slimv_swank_cmd = '! sbcl --load /usr/share/common-lisp/source/slime/start-swank.lisp &'
+
 " based on:
 " http://vim.1045645.n5.nabble.com/editing-Python-files-how-to-keep-track-of-class-membership-td1189290.html
 
