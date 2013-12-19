@@ -61,3 +61,6 @@
 [submodule "_vim/bundle/slimv"]
 	path = _vim/bundle/slimv
 	url = https://github.com/vim-scripts/slimv.vim.git
+[submodule "_vim/bundle/salt"]
+	path = _vim/bundle/salt
+	url = https://github.com/saltstack/salt-vim
