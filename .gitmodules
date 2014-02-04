@@ -64,3 +64,6 @@
 [submodule "_vim/bundle/vim-airline"]
 	path = _vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "_vim/bundle/salt"]
+	path = _vim/bundle/salt
+	url = https://github.com/saltstack/salt-vim
