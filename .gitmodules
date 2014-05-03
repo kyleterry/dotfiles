@@ -67,3 +67,6 @@
 [submodule "_vim/bundle/salt"]
 	path = _vim/bundle/salt
 	url = https://github.com/saltstack/salt-vim
+[submodule "_vim/bundle/xdebug"]
+	path = _vim/bundle/xdebug
+	url = https://github.com/vim-scripts/Xdebug.git
