@@ -13,6 +13,8 @@ set pastetoggle=<F2>
 set confirm
 set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set ttyfast
+set term=screen-256color
 hi NonText ctermfg=7 guifg=gray
 colorscheme badwolf
 
@@ -35,8 +37,8 @@ nnoremap <leader><space> :nohlsearch<cr> " hide the matches (:noh)
 set cursorline
 set cursorcolumn
 set colorcolumn=79
-"highlight CursorColumn ctermbg=0 cterm=NONE
-"highlight CursorLine ctermbg=0 cterm=NONE
+highlight CursorColumn cterm=NONE
+highlight CursorLine cterm=NONE
 set ruler
 
 " editing
@@ -93,8 +95,13 @@ let g:pyflakes_use_quickfix = 0
 " virtualenv
 let g:pymode_virtualenv = 1
 
+let g:pymode_rope_lookup_project = 0
+
 " vim-pad
 let g:pad_dir = '~/Documents/pad'
+
+" Debugging
+"let g:vdebug_options['port'] = "9050"
 
 let g:slimv_swank_cmd = '! sbcl --load /usr/share/common-lisp/source/slime/start-swank.lisp &'
 

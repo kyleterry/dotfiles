@@ -64,3 +64,12 @@
 [submodule "_vim/bundle/salt"]
 	path = _vim/bundle/salt
 	url = https://github.com/saltstack/salt-vim
+[submodule "_vim/bundle/nginx"]
+	path = _vim/bundle/nginx
+	url = https://github.com/evanmiller/nginx-vim-syntax.git
+[submodule "_vim/bundle/vdebug"]
+	path = _vim/bundle/vdebug
+	url = https://github.com/joonty/vdebug.git
+[submodule "_vim/bundle/MatchTag"]
+	path = _vim/bundle/MatchTag
+	url = https://github.com/gregsexton/MatchTag.git

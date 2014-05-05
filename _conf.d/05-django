@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# django
+export DJANGO_COLORS="error=red;notice=magenta;http_server_error=red"

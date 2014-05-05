@@ -13,24 +13,45 @@ if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 
     export CLICOLOR=1
     export LSCOLORS=gxfxfxfxcxexexbxbxbxbx
-    COLOR_RED="\[\033[01;31m\]"
-    COLOR_GREEN="\[\033[01;32m\]"
-    COLOR_YELLOW="\[\033[01;33m\]"
-    COLOR_BLUE="\[\033[01;34m\]"
-    COLOR_PURPLE="\[\033[01;35m\]"
-    COLOR_CYAN="\[\033[01;36m\]"
-    COLOR_WHITE="\[\033[00m\]"
+    #COLOR_RED="\[\033[01;31m\]"
+    #COLOR_GREEN="\[\033[01;32m\]"
+    #COLOR_YELLOW="\[\033[01;33m\]"
+    #COLOR_BLUE="\[\033[01;34m\]"
+    #COLOR_PURPLE="\[\033[01;35m\]"
+    #COLOR_CYAN="\[\033[01;36m\]"
+    #COLOR_WHITE="\[\033[00m\]"
+    COLOR_RED='\033[00;31m'
+    COLOR_GREEN='\033[00;32m'
+    COLOR_YELLOW='\033[00;33m'
+    COLOR_BLUE='\033[00;34m'
+    COLOR_PURPLE='\033[00;35m'
+    COLOR_CYAN='\033[00;36m'
+    COLOR_GRAY='\033[00;37m'
+    COLOR_LRED='\033[01;31m'
+    COLOR_LGREEN='\033[01;32m'
+    COLOR_LYELLOW='\033[01;33m'
+    COLOR_LBLUE='\033[01;34m'
+    COLOR_LPURPLE='\033[01;35m'
+    COLOR_LCYAN='\033[01;36m'
+    COLOR_WHITE='\033[01;37m'
 
 else
 # Actually, we prefer to trip the fuck out in old school black and white
     technicolor=
 fi
 
+# Normal user is purple, root is red.
+if [ `id -u` == '0' ]; then
+    USER_COLOR=$COLOR_RED
+else
+    USER_COLOR=$COLOR_LPURPLE
+fi
+
 # History
 shopt -s histappend
 shopt -s cmdhist
 
-export HISTFILE=~/.history/`date +%Y-%m-%d`.hist
+#export HISTFILE=~/.history/`date +%Y-%m-%d`.hist
 export HISTTIMEFORMAT="%T "
 
 PS1='[\u@\h \W]\$ '
@@ -65,11 +86,11 @@ function make_prompt {
         BOTTOM_BAR=""
     fi
 
-    if [[ `pwd` =~ 'code' ]]; then
-        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_PURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
+    if [[ `pwd` =~ 'src' ]]; then
+        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
         PS2=" > "
     else
-        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_PURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
+        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
         PS2=" > "
     fi
 }
@@ -92,6 +113,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# some more ls aliases
+alias ls='ls -G'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 # local bash completion
 for i in ~/.bash_completion.d/* ; do
     if [ -r "$i" ]; then
@@ -99,33 +126,27 @@ for i in ~/.bash_completion.d/* ; do
     fi
 done
 
-# some more ls aliases
-alias ls='ls -G'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+if [ -d ${HOME}/.conf.d ]; then
+    for conf in ${HOME}/.conf.d/*; do
+        if [ -r "${conf}" ]; then
+            . ${conf}
+        fi
+    done
+fi
 
-# workflow aliases
-alias pac='sudo pacman'
-alias yao='yaourt'
-
-# virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-source /usr/local/share/python/virtualenvwrapper.sh
 
 stty -ixon
 
-# django
-export DJANGO_COLORS="error=red;notice=magenta;http_server_error=red"
-
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
-
-export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-source /Users/kyle/.rvm/scripts/rvm
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
+now() {
+    file="$HOME/.now"
+    if [ ! -f $file ]; then
+        touch $file;
+    fi
+    if [[ -z $@ ]]; then
+        today="$(date "+%Y-%m-%d")"
+        grep --color=never $today $file | cut -d' ' -f2-
+    else
+        stamp="$(date "+%Y-%m-%d %H:%M:%S")"
+        echo $stamp - "$@" >> $file
+    fi
+}

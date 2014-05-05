@@ -43,7 +43,7 @@
     br = branch
     co = checkout
     df = diff
-    me = log --author=Kyle Terry
+    me = log --author="Kyle Terry"
     lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
     up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%Cred%ae %Creset- %C(yellow)%s %Creset(%ar)\" HEAD@{1}..'
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
@@ -51,3 +51,6 @@
     ls = ls-files
 [help]
 	autocorrect = 1
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

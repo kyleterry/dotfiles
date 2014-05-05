@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+source `which virtualenvwrapper.sh`

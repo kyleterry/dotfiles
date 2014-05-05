@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# workflow aliases
+alias pac='sudo pacman'
+alias yao='yaourt'
