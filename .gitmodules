@@ -7,9 +7,6 @@
 [submodule "_vim/bundle/ack"]
 	path = _vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "_vim/bundle/powerline"]
-	path = _vim/bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "_vim/bundle/Tasklist"]
 	path = _vim/bundle/Tasklist
 	url = https://github.com/vim-scripts/TaskList.vim.git
@@ -61,6 +58,12 @@
 [submodule "_vim/bundle/slimv"]
 	path = _vim/bundle/slimv
 	url = https://github.com/vim-scripts/slimv.vim.git
+[submodule "_vim/bundle/vim-markdown"]
+	path = _vim/bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown
+[submodule "_vim/bundle/vim-airline"]
+	path = _vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
 [submodule "_vim/bundle/salt"]
 	path = _vim/bundle/salt
 	url = https://github.com/saltstack/salt-vim
@@ -73,3 +76,9 @@
 [submodule "_vim/bundle/MatchTag"]
 	path = _vim/bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag.git
+[submodule "_vim/bundle/xdebug"]
+	path = _vim/bundle/xdebug
+	url = https://github.com/vim-scripts/Xdebug.git
+[submodule "_vim/bundle/python-mode"]
+	path = _vim/bundle/python-mode
+	url = https://github.com/klen/python-mode.git

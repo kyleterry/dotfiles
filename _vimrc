@@ -18,6 +18,10 @@ set term=screen-256color
 hi NonText ctermfg=7 guifg=gray
 colorscheme badwolf
 
+" Directories for vim-created files
+set directory=~/.vimtmp
+set backupdir=~/.vimtmp
+
 " kill whitespace at EOL
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -94,6 +98,7 @@ let g:pyflakes_use_quickfix = 0
 
 " virtualenv
 let g:pymode_virtualenv = 1
+let g:pymode_run_key = '<leader>r'
 
 let g:pymode_rope_lookup_project = 0
 
@@ -104,6 +109,20 @@ let g:pad_dir = '~/Documents/pad'
 "let g:vdebug_options['port'] = "9050"
 
 let g:slimv_swank_cmd = '! sbcl --load /usr/share/common-lisp/source/slime/start-swank.lisp &'
+
+" mutt
+au BufRead /tmp/mutt-* set tw=72
+
+" markdown
+au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile *.markdown setlocal textwidth=80
+
+" move text and rehighlight -- vim tip_id=224
+vnoremap > ><CR>gv
+vnoremap < <<CR>gv 
+
+" C programming
+" TODO
 
 " based on:
 " http://vim.1045645.n5.nabble.com/editing-Python-files-how-to-keep-track-of-class-membership-td1189290.html
