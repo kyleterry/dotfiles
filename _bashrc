@@ -57,11 +57,11 @@ export HISTTIMEFORMAT="%T "
 PS1='[\u@\h \W]\$ '
 
 function make_prompt {
-    history -a
-
     EXITSTATUS="$?"
 
-    if [ "$EXITSTATUS" -eq "0" ]
+    history -a
+
+    if [[ $EXITSTATUS -eq 0 ]]
     then
         STATUS="${COLOR_GREEN}OK"
     else
