@@ -76,9 +76,6 @@
 [submodule "_vim/bundle/MatchTag"]
 	path = _vim/bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag.git
-[submodule "_vim/bundle/xdebug"]
-	path = _vim/bundle/xdebug
-	url = https://github.com/vim-scripts/Xdebug.git
 [submodule "_vim/bundle/python-mode"]
 	path = _vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
