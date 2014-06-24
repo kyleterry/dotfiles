@@ -12,7 +12,7 @@ if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     technicolor=rainbow
 
     export CLICOLOR=1
-    export LSCOLORS=gxfxfxfxcxexexbxbxbxbx
+    #export LSCOLORS=gxfxfxfxcxexexbxbxbxbx
     #COLOR_RED="\[\033[01;31m\]"
     #COLOR_GREEN="\[\033[01;32m\]"
     #COLOR_YELLOW="\[\033[01;33m\]"
@@ -20,20 +20,20 @@ if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     #COLOR_PURPLE="\[\033[01;35m\]"
     #COLOR_CYAN="\[\033[01;36m\]"
     #COLOR_WHITE="\[\033[00m\]"
-    COLOR_RED='\033[00;31m'
-    COLOR_GREEN='\033[00;32m'
-    COLOR_YELLOW='\033[00;33m'
-    COLOR_BLUE='\033[00;34m'
-    COLOR_PURPLE='\033[00;35m'
-    COLOR_CYAN='\033[00;36m'
-    COLOR_GRAY='\033[00;37m'
-    COLOR_LRED='\033[01;31m'
-    COLOR_LGREEN='\033[01;32m'
-    COLOR_LYELLOW='\033[01;33m'
-    COLOR_LBLUE='\033[01;34m'
-    COLOR_LPURPLE='\033[01;35m'
-    COLOR_LCYAN='\033[01;36m'
-    COLOR_WHITE='\033[01;37m'
+    COLOR_RED='\[\033[00;31m\]'
+    COLOR_GREEN='\[\033[00;32m\]'
+    COLOR_YELLOW='\[\033[00;33m\]'
+    COLOR_BLUE='\[\033[00;34m\]'
+    COLOR_PURPLE='\[\033[00;35m\]'
+    COLOR_CYAN='\[\033[00;36m\]'
+    COLOR_GRAY='\[\033[00;37m\]'
+    COLOR_LRED='\[\033[00;31m\]'
+    COLOR_LGREEN='\[\033[00;32m\]'
+    COLOR_LYELLOW='\[\033[00;33m\]'
+    COLOR_LBLUE='\[\033[00;34m\]'
+    COLOR_LPURPLE='\[\033[00;35m\]'
+    COLOR_LCYAN='\[\033[00;36m\]'
+    COLOR_WHITE='\[\033[00;37m\]'
 
 else
 # Actually, we prefer to trip the fuck out in old school black and white
@@ -54,7 +54,7 @@ shopt -s cmdhist
 #export HISTFILE=~/.history/`date +%Y-%m-%d`.hist
 export HISTTIMEFORMAT="%T "
 
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
 
 function make_prompt {
     EXITSTATUS="$?"
@@ -87,10 +87,10 @@ function make_prompt {
     fi
 
     if [[ `pwd` =~ 'src' ]]; then
-        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
+        PS1="${COLOR_PURPLE}[ \! ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
         PS2=" > "
     else
-        PS1="${COLOR_PURPLE}[ ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
+        PS1="${COLOR_PURPLE}[ \! ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_WHITE}"
         PS2=" > "
     fi
 }
@@ -114,10 +114,15 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ls='ls -G'
+alias ls='ls -G --color'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# global bash completion
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
 
 # local bash completion
 for i in ~/.bash_completion.d/* ; do
