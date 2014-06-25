@@ -1,3 +1,4 @@
+" let g:pathogen_disable = []
 call pathogen#infect()
 
 let mapleader=","

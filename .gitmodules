@@ -82,3 +82,6 @@
 [submodule "_vim/bundle/dispatch"]
 	path = _vim/bundle/dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "_vim/bundle/tagbar"]
+	path = _vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
