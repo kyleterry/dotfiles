@@ -7,6 +7,7 @@ filetype on
 set encoding=utf-8
 set t_Co=256
 set relativenumber
+set number
 set numberwidth=1
 set title
 set pastetoggle=<F2>
