@@ -42,5 +42,13 @@ if [[ ! -f ${HOME}/bin ]]; then
     cp -r ${BASE_DIR}/bin ${HOME}
 fi
 
+if [[ -d ${BASE_DIR}/install_hooks.d ]]; then
+    for item in ${BASE_DIR}/install_hooks.d/*; do
+        if [[ -x ${item} ]]; then
+            . ${item}
+        fi
+    done
+fi
+
 echo "Updating submodules..."
 ${BASE_DIR}/submodules.sh | grep 'Entering' | awk '{print $2}'

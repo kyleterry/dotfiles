@@ -91,3 +91,6 @@
 [submodule "_vim/bundle/vim-plugins"]
 	path = _vim/bundle/vim-plugins
 	url = https://github.com/WolfgangMehner/vim-plugins.git
+[submodule "_vim/bundle/syntastic"]
+	path = _vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git

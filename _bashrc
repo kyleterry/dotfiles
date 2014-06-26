@@ -51,10 +51,7 @@ fi
 shopt -s histappend
 shopt -s cmdhist
 
-#export HISTFILE=~/.history/`date +%Y-%m-%d`.hist
 export HISTTIMEFORMAT="%T "
-
-#PS1='[\u@\h \W]\$ '
 
 function make_prompt {
     EXITSTATUS="$?"
@@ -138,7 +135,6 @@ if [ -d ${HOME}/.conf.d ]; then
         fi
     done
 fi
-
 
 stty -ixon
 
