@@ -19,7 +19,7 @@ for item in $(cat ${MANIFEST}); do
     file_destination=${2}
     file_destination_full=${HOME}/${file_destination}
     echo "Backing up ${file_destination_full}..."
-    if [[ -f ${file_destination_full} ]]; then
+    if [[ -f ${file_destination_full} ]] || [[ -d ${file_destination_full} ]]; then
         if [[ ! -L ${file_destination_full} ]]; then
             mv ${file_destination_full} ${ROAMER_BACKUP_DIR}/${file_destination}.bak-${DATE}
         else
