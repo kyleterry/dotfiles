@@ -85,3 +85,9 @@
 [submodule "_vim/bundle/tagbar"]
 	path = _vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "_vim/bundle/go"]
+	path = _vim/bundle/go
+	url = https://github.com/fatih/vim-go.git
+[submodule "_vim/bundle/vim-plugins"]
+	path = _vim/bundle/vim-plugins
+	url = https://github.com/WolfgangMehner/vim-plugins.git

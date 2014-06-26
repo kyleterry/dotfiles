@@ -95,6 +95,9 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+" Tagbar
+nmap <leader>tb :TagbarToggle<CR>
+
 " pyflakes
 let g:pyflakes_use_quickfix = 0
 
@@ -125,6 +128,9 @@ vnoremap < <<CR>gv
 
 " C programming
 " TODO
+
+" Go programming
+let g:go_fmt_autosave = 0
 
 " based on:
 " http://vim.1045645.n5.nabble.com/editing-Python-files-how-to-keep-track-of-class-membership-td1189290.html

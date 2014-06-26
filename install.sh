@@ -4,7 +4,7 @@ BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROAMER_BACKUP_DIR=${HOME}/.roamer_backups
 DATE=$(date +%s)
 MANIFEST=${1}
-if [ ! ${MANIFEST} ]; then
+if [[ ! ${MANIFEST} ]]; then
     echo "usage: ${0} manifests/manifest.in"
     echo "\t manifest.in files are required"
     exit 1
@@ -19,8 +19,8 @@ for item in $(cat ${MANIFEST}); do
     file_destination=${2}
     file_destination_full=${HOME}/${file_destination}
     echo "Backing up ${file_destination_full}..."
-    if [ -f ${file_destination_full} ]; then
-        if [ ! -L ${file_destination_full} ]; then
+    if [[ -f ${file_destination_full} ]]; then
+        if [[ ! -L ${file_destination_full} ]]; then
             mv ${file_destination_full} ${ROAMER_BACKUP_DIR}/${file_destination}.bak-${DATE}
         else
             echo "Not a real file!"
@@ -31,6 +31,16 @@ for item in $(cat ${MANIFEST}); do
     echo "Linking ${file_source} -> ${file_destination_full}"
     ln -s ${file_source} ${file_destination_full}
 done
+
+# Make sure ${HOME}/.conf.d exists
+if [[ ! -f ${HOME}/.conf.d ]]; then
+    mkdir -p ${HOME}/.conf.d
+fi
+
+# Make sure ${HOME}/bin exists
+if [[ ! -f ${HOME}/bin ]]; then
+    cp -r ${BASE_DIR}/bin ${HOME}
+fi
 
 echo "Updating submodules..."
 ${BASE_DIR}/submodules.sh | grep 'Entering' | awk '{print $2}'

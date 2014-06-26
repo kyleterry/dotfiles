@@ -1,0 +1,9 @@
+_vim=.vim
+_vimrc=.vimrc
+_bashrc=.bashrc
+_gitconfig=.gitconfig
+_mutt=.mutt
+_tmux.conf=.tmux.conf
+_xinitrc=.xinitrc
+_Xmodmap=.Xmodmap
+_Xresources=.Xresources
