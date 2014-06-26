@@ -94,3 +94,6 @@
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "_vim/bundle/gitgutter"]
+	path = _vim/bundle/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
