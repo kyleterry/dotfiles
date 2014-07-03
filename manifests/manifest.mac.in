@@ -1,3 +1,5 @@
 _vimrc=.vimrc
 _vim=.vim
 _bashrc=.bashrc
+_tmux.conf=.tmux.conf
+_gitconfig=.gitconfig
