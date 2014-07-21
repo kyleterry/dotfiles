@@ -97,3 +97,6 @@
 [submodule "_vim/bundle/gitgutter"]
 	path = _vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "_vim/bundle/berkshelf"]
+	path = _vim/bundle/berkshelf
+	url = https://github.com/alpaca-tc/berkshelf.vim.git

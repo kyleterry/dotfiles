@@ -1,0 +1,29 @@
+#!/bin/bash
+OPSCODE_USER=chef-server-username
+ORGNAME=chef
+
+COOKBOOK_COPYRIGHT='Kyle Terry'
+COOKBOOK_EMAIL='kylet@copiousinc.com'
+
+export OPSCODE_USER ORGNAME COOKBOOK_COPYRIGHT COOKBOOK_EMAIL
+
+function knife_reset {
+  OPSCODE_USER=chef-server-username
+  ORGNAME=chef
+  export OPSCODE_USER ORGNAME
+}
+
+function spokane {
+  OPSCODE_USER=kyle
+  ORGNAME=spokane
+  export OPSCODE_USER ORGNAME
+  knife "$@"
+}
+
+function dallas {
+  OPSCODE_USER=kyle
+  ORGNAME=dallas
+  export OPSCODE_USER ORGNAME
+  knife "$@"
+}
+
