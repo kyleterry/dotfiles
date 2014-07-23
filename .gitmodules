@@ -100,3 +100,6 @@
 [submodule "_vim/bundle/berkshelf"]
 	path = _vim/bundle/berkshelf
 	url = https://github.com/alpaca-tc/berkshelf.vim.git
+[submodule "_vim/bundle/vim-sleuth"]
+	path = _vim/bundle/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git
