@@ -1,0 +1,8 @@
+_vim=.vim
+_vimrc=.vimrc
+_bashrc=.bashrc
+_bash_profile=.bash_profile
+_gitconfig=.gitconfig
+_mutt=.mutt
+_tmux.conf=.tmux.conf
+_Xmodmap=.Xmodmap

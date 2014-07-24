@@ -37,6 +37,11 @@ if [[ ! -f ${HOME}/.conf.d ]]; then
     mkdir -p ${HOME}/.conf.d
 fi
 
+# Make sure ${HOME}/.vimtmp exists
+if [[ ! -f ${HOME}/.vimtmp ]]; then
+    mkdir -p ${HOME}/.vimtmp
+fi
+
 # Make sure ${HOME}/bin exists
 if [[ ! -f ${HOME}/bin ]]; then
     cp -r ${BASE_DIR}/bin ${HOME}
