@@ -10,16 +10,18 @@ import qualified XMonad.StackSet as W
 
 myTerminal = "urxvt"
 myModMask = mod4Mask
-myWorkspaces = ["main", "web", "code"] ++ map show [4..9]
+myWorkspaces = ["main", "web", "code", "games", "docs"] ++ map show [6..9]
 myManagehook = composeAll . concat $
     [
         [ className =? b --> viewShift "web" | b <- myClassWebShifts ],
-        [ className =? i --> doFloat | i <- myClassFloats ]
+        [ className =? i --> doFloat | i <- myClassFloats ++ myClassGames ],
+        [ className =? g --> viewShift "games" | g <- myClassGames ]
     ]
     where
         viewShift = doF . liftM2 (.) W.greedyView W.shift
         myClassWebShifts = ["Firefox", "Iceweasel"]
         myClassFloats    = ["mplayer", "Gimp", "VLC"]
+        myClassGames     = ["Steam"]
 myLogHook h = dynamicLogWithPP $ xmobarPP
                                     { ppTitle = xmobarColor "green" "" . shorten 50
                                     , ppOutput = hPutStrLn h

@@ -51,6 +51,7 @@ shopt -s histappend
 shopt -s cmdhist
 
 export HISTTIMEFORMAT="%T "
+export HISTSIZE=""
 
 function make_prompt {
     EXITSTATUS="$?"
