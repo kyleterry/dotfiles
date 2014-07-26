@@ -7,6 +7,9 @@
 *foreground:  #dcdcdc
 *background:  #000000
 
+URxvt.depth: 32
+URxvt*background: rgba:0000/0000/0000/cccc
+
 URxvt*letterSpace:  -1
 URxvt*fading:       10%
 URxvt*fadeColor:    grey

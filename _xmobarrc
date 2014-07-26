@@ -1,0 +1,27 @@
+Config { font = "xft:Terminus:pixelsize=12:antialias=true"
+        , bgColor = "#2c2c2c"
+        , fgColor = "#657b83"
+        , border = NoBorder
+        , borderColor = "black"
+        , hideOnStart = False
+        , persistent = True
+        , position = Top
+        , lowerOnStart = True
+        , allDesktops = True
+        , commands = [ Run Weather "KPDX" ["-t"," <tempF>F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
+                        , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                        , Run Memory ["-t","Mem: <usedratio>%"] 10
+                        , Run Date "%a %b %_d %l:%M" "date" 10
+                        , Run StdinReader
+                        , Run BatteryP ["BAT0"]
+                                    ["-t", "<acstatus> <left>%",
+                                    "-L", "10", "-H", "80", "-p", "3",
+                                    "--", "-O", "<fc=green>On</fc> - ", "-i", "",
+                                    "-L", "-15", "-H", "-5",
+                                    "-l", "red", "-m", "blue", "-h", "green"]
+                                    600
+                        ]
+        , sepChar = "%"
+        , alignSep = "}{"
+        , template = "%StdinReader% }{ %cpu% | %memory% | %KPDX% | %battery% | <fc=#ee9a00>%date%</fc>"
+       }

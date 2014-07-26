@@ -7,5 +7,7 @@ _mutt=.mutt
 _tmux.conf=.tmux.conf
 _xinitrc=.xinitrc
 _Xmodmap=.Xmodmap
+_xmonad=.xmonad
+_xmobarrc=.xmobarrc
 _Xresources=.Xresources
 _screenlock.sh=.screenlock.sh
