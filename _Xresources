@@ -1,12 +1,13 @@
 ! vim: ft=xdefaults
 !*font: xft:Source Code Pro for Powerline:size=10:antialias=true:hinting=false:autohint=false
-*font: xft:DejaVu Sans Mono for Powerline:size=10:antialias=true:hinting=false:autohint=false
+!*font: xft:DejaVu Sans Mono for Powerline:size=8:antialias=true:hinting=false:autohint=false
+*font: xft:Inconsolata for Powerline:size=10:antialias=true:hinting=false:autohint=false
 *boldFont:
 
 *foreground:  #dcdcdc
 *background:  #000000
 
-URxvt*lineSpace:    2
+URxvt*letterSpace:  -1
 URxvt*fading:       10%
 URxvt*fadeColor:    grey
 URxvt*scrollBar:    false

@@ -1,11 +1,12 @@
-#!/bin/sh
-eval `ssh-agent -t 21600`
+#!/bin/bash
+
+#spawns
 urxvtd -q -f -o &
-xrdb -load ~/.Xresources &
-xset fp+ /usr/share/fonts/local/
 xautolock -time 5 -locker "${HOME}/.screenlock.sh" -detectsleep &
-xset fp rehash
+eval `ssh-agent`
 xmodmap ~/.Xmodmap
-. ~/.monitorsrc
-dwmstatus &
+feh --no-fehbg --bg-max ~/background.png
+xrdb -load ${HOME}/.Xresources
+xset fp rehash
+xsetroot -cursor_name  left_ptr
 exec dbus-launch ssh-agent -- xmonad
