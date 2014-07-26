@@ -6,3 +6,4 @@ _gitconfig=.gitconfig
 _mutt=.mutt
 _tmux.conf=.tmux.conf
 _Xmodmap=.Xmodmap
+_screenlock.sh=.screenlock.sh

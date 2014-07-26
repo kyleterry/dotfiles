@@ -61,6 +61,6 @@ ${BASE_DIR}/submodules.sh | grep 'Entering' | awk '{print $2}'
 echo "Installing packages"
 if [ -f /etc/debian_version ]; then
     sudo apt-get update
-    sudo apt-get install git mercurial golang python-pip build-essential htop dzen2 tmux feh
+    sudo apt-get install git mercurial golang python-pip build-essential htop dzen2 tmux feh xautolock
     sudo pip install virtualenvwrapper
 fi
