@@ -6,7 +6,6 @@ DATE=$(date +%s)
 MANIFEST=${1}
 if [[ ! ${MANIFEST} ]]; then
     echo "usage: ${0} manifests/manifest.in"
-    echo "\t manifest.in files are required"
     exit 1
 fi
 
@@ -61,6 +60,6 @@ ${BASE_DIR}/submodules.sh | grep 'Entering' | awk '{print $2}'
 echo "Installing packages"
 if [ -f /etc/debian_version ]; then
     sudo apt-get update
-    sudo apt-get install git mercurial golang python-pip build-essential htop dzen2 tmux feh xautolock
+    sudo apt-get install -y git mercurial golang python-pip build-essential htop dzen2 tmux feh xautolock
     sudo pip install virtualenvwrapper
 fi

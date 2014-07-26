@@ -8,3 +8,4 @@ _tmux.conf=.tmux.conf
 _xinitrc=.xinitrc
 _Xmodmap=.Xmodmap
 _Xresources=.Xresources
+_screenlock.sh=.screenlock.sh
