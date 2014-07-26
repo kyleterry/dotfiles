@@ -3,11 +3,10 @@
 #spawns
 urxvtd -q -f -o &
 xautolock -time 5 -locker "${HOME}/.screenlock.sh" -detectsleep &
-eval `ssh-agent`
+eval $(cat ${HOME}/.fehbg)
 xmodmap ~/.Xmodmap
-feh --no-fehbg --bg-max ~/background.png
 xrdb -load ${HOME}/.Xresources
 xset fp rehash
 xsetroot -cursor_name  left_ptr
 udiskie &
-exec dbus-launch ssh-agent -- xmonad
+exec dbus-run-session ssh-agent -- xmonad

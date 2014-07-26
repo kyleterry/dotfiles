@@ -3,6 +3,7 @@
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROAMER_BACKUP_DIR=${HOME}/.roamer_backups
 DATE=$(date +%s)
+INITIAL_WP=RCkQyvn.jpg
 MANIFEST=${1}
 if [[ ! ${MANIFEST} ]]; then
     echo "usage: ${0} manifests/manifest.in"
@@ -60,6 +61,7 @@ ${BASE_DIR}/submodules.sh | grep 'Entering' | awk '{print $2}'
 echo "Installing packages"
 if [ -f /etc/debian_version ]; then
     sudo apt-get update
-    sudo apt-get install -y git mercurial golang python-pip build-essential htop dzen2 tmux feh xautolock xmonad xmobar xorg
+    sudo apt-get install -y git mercurial golang python-pip build-essential htop dzen2 tmux feh xautolock xmonad xmobar xorg feh
     sudo pip install virtualenvwrapper udiskie
+    feh --bg-scale .wallpaper/${INITIAL_WP} &
 fi

@@ -1,4 +1,6 @@
 set send_charset="utf-8"
+set beep=yes
+set beep_new=yes
 
 set editor="vim"
 set my_name="Kyle Terry"
