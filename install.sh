@@ -62,4 +62,5 @@ echo "Installing packages"
 if [ -f /etc/debian_version ]; then
     sudo apt-get update
     sudo apt-get install git mercurial golang python-pip build-essential htop dzen2 tmux feh
+    sudo pip install virtualenvwrapper
 fi
