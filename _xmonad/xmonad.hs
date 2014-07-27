@@ -56,10 +56,6 @@ myLayoutHook = avoidStruts
 myCurrentWSColor = "#e6744c" -- color of active workspace
 myVisibleWSColor = "#c185a7" -- color of inactive workspace
 myUrgentWSColor = "#cc0000" -- color of workspace with 'urgent' window
-myCurrentWSLeft = "[" -- wrap active workspace with these
-myCurrentWSRight = "]"
-myVisibleWSLeft = "(" -- wrap inactive workspace with these
-myVisibleWSRight = ")"
 myUrgentWSLeft = "{" -- wrap urgent workspace with these
 myUrgentWSRight = "}"
 
