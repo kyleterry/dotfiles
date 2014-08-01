@@ -13,7 +13,7 @@ Config { font = "xft:Terminus:pixelsize=12:antialias=true"
                         , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                         , Run Memory ["-t","Mem: <usedratio>%"] 10
                         , Run Date "%a %b %_d %H:%M" "date" 10
-                        --, Run Volume "default" "Master" [] 10
+                        , Run Volume "default" "Master" [] 10
                         , Run StdinReader
                         , Run BatteryP ["BAT0"]
                                     ["-t", "<acstatus> <left>%",
@@ -25,5 +25,5 @@ Config { font = "xft:Terminus:pixelsize=12:antialias=true"
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% }{ %wifi% | %cpu% | %memory% | %battery% | %KPDX% | <fc=#ee9a00>%date%</fc>"
+        , template = "%StdinReader% }{ %wifi% | %default:Master% | %cpu% | %memory% | %battery% | %KPDX% | <fc=#ee9a00>%date%</fc>"
        }
