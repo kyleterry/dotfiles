@@ -103,3 +103,9 @@
 [submodule "_vim/bundle/vim-sleuth"]
 	path = _vim/bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "_vim/bundle/grep"]
+	path = _vim/bundle/grep
+	url = https://github.com/yegappan/grep.git
+[submodule "_vim/bundle/dash"]
+	path = _vim/bundle/dash
+	url = https://github.com/rizzatti/dash.vim.git
