@@ -79,7 +79,7 @@ keysToAdd x =
     ]
 myKeys x = M.union (keys defaultConfig x) (M.fromList (keysToAdd x))
 main = do
-    xmproc <- spawnPipe "xmobar"
+    xmproc <- spawnPipe "/home/kyle/.cabal/bin/xmobar"
     xmonad $ withUrgencyHook NoUrgencyHook $ defaultConfig {
         terminal    = myTerminal,
         workspaces  = myWorkspaces,

@@ -202,6 +202,7 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 " ruby
 autocmd FileType ruby setlocal foldmethod=syntax
