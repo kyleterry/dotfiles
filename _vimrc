@@ -63,6 +63,12 @@ set expandtab " Use spaces, not tabs, for autoindent/tab key.
 set shiftround " rounds indent to a multiple of shiftwidth
 set laststatus=2
 
+" tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
 " completion
 set completeopt=menuone,longest,preview
 set pumheight=6
