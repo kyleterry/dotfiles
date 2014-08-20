@@ -163,8 +163,7 @@ let g:slimv_swank_cmd = '! sbcl --load /usr/share/common-lisp/source/slime/start
 au BufRead /tmp/mutt-* set tw=72
 
 " markdown
-au BufRead,BufNewFile *.md setlocal textwidth=80
-au BufRead,BufNewFile *.markdown setlocal textwidth=80
+au BufRead,BufNewFile *.markdown,*.md setlocal spell textwidth=80
 
 " move text and rehighlight -- vim tip_id=224
 vnoremap > ><CR>gv
