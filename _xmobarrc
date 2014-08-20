@@ -9,6 +9,7 @@ Config { font = "xft:Terminus:pixelsize=12:antialias=true"
         , lowerOnStart = True
         , allDesktops = True
         , commands = [ Run Weather "KPDX" ["-t"," <tempF>F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
+                        , Run MPD ["-t", "<statei> <artist> <title> <bar>", "--", "-P", ">>", "-Z", "|", "-S", "><"] 10
                         , Run Com "/home/kyle/bin/wifi.sh" [] "wifi" 30
                         , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                         , Run Memory ["-t","Mem: <usedratio>%"] 10
@@ -25,5 +26,5 @@ Config { font = "xft:Terminus:pixelsize=12:antialias=true"
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% }{ %wifi% | %default:Master% | %cpu% | %memory% | %battery% | %KPDX% | <fc=#ee9a00>%date%</fc>"
+        , template = "%StdinReader% }{ %mpd% | %default:Master% | %cpu% | %memory% | %battery% | %KPDX% | <fc=#ee9a00>%date%</fc>"
        }
