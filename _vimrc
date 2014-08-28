@@ -1,4 +1,4 @@
-" let g:pathogen_disable = []
+let g:pathogen_disable = ["vim-sleuth", "sleuth"]
 call pathogen#infect()
 
 let mapleader=","
