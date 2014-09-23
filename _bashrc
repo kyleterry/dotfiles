@@ -111,7 +111,11 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ls='ls -G --color'
+if [[ "$(uname)" == "Darwin" ]]; then
+    alias ls='ls -G'
+else
+    alias ls='ls -G --color'
+fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'

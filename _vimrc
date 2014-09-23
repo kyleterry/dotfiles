@@ -1,4 +1,4 @@
-" let g:pathogen_disable = []
+let g:pathogen_disable = ["vim-sleuth", "sleuth"]
 call pathogen#infect()
 
 let mapleader=","
@@ -164,6 +164,9 @@ au BufRead /tmp/mutt-* set tw=72
 
 " markdown
 au BufRead,BufNewFile *.markdown,*.md,*.txt setlocal spell textwidth=80
+
+" Git commits
+au BufNewFile,BufRead COMMIT_EDITMSG set spell
 
 " move text and rehighlight -- vim tip_id=224
 vnoremap > ><CR>gv
