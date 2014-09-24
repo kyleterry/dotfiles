@@ -17,10 +17,9 @@ fi
 mkdir -p "${ROAMER_BACKUP_DIR}"
 
 echo "==> Reading manifest and linking files..."
-for item in $(cat "${MANIFEST}"); do
-    set -- $(echo "${item}" | tr '=' ' ')
-    file_source=${BASE_DIR}/${1}
-    file_destination=${2}
+while IFS="=" read -r file_source file_destination
+do
+    file_source_full=${BASE_DIR}/${file_source}
     file_destination_full=${HOME}/${file_destination}
     echo "==> Backing up ${file_destination_full}..."
     if [[ -f ${file_destination_full} ]] || [[ -d ${file_destination_full} ]]; then
@@ -34,7 +33,7 @@ for item in $(cat "${MANIFEST}"); do
     fi
     echo "==> Linking ${file_source} -> ${file_destination_full}"
     ln -s "${file_source}" "${file_destination_full}"
-done
+done < "${MANIFEST}"
 
 # Make sure ${HOME}/.conf.d exists
 if [[ ! -f ${HOME}/.conf.d ]]; then
