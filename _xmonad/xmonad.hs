@@ -17,13 +17,13 @@ import qualified Data.Map as M
 
 myTerminal = "urxvt"
 myModMask = mod4Mask
-myWorkspaces = ["main", "web", "code", "games", "docs"] ++ map show [6..9]
+myWorkspaces = ["main", "web", "code", "build", "docs", "games"] ++ map show [7..9]
 myManagehook = composeAll . concat $
     [
         [ className =? b  --> viewShift "web" | b <- myClassWebShifts ],
         [ className =? i  --> doFloat | i <- myClassFloats ++ myClassGames ],
         [ className =? g  --> viewShift "games" | g <- myClassGames ],
-        [ className =? ig --> doIgnore | ig <- myClassGames ],
+        -- [ className =? ig --> doIgnore | ig <- myClassGames ],
         [ isDialog        --> doCenterFloat ],
         [ isFullscreen    --> doFullFloat ]
     ]
