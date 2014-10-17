@@ -109,3 +109,6 @@
 [submodule "_vim/bundle/detectindent"]
 	path = _vim/bundle/detectindent
 	url = https://github.com/ciaranm/detectindent.git
+[submodule "_vim/bundle/vimdeck"]
+	path = _vim/bundle/vimdeck
+	url = https://github.com/tybenz/vimdeck.git

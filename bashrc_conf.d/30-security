@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+vimdecrypt() {
+    gpg -d "$1" | vim - -n -i "NONE" "+set filetype=$2";
+}
+alias vd="vimdecrypt"
