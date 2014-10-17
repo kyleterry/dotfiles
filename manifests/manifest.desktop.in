@@ -4,6 +4,7 @@ _bashrc=.bashrc
 _bash_profile=.bash_profile
 _gitconfig=.gitconfig
 _mutt=.mutt
+_ncmpcpp=.ncmpcpp
 _tmux.conf=.tmux.conf
 _Xmodmap=.Xmodmap
 _xmonad=.xmonad

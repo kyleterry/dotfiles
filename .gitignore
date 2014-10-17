@@ -1,3 +1,4 @@
 *.swp
 *.swo
 .netrwhist
+_ncmpcpp/*.log

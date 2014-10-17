@@ -163,7 +163,7 @@ let g:slimv_swank_cmd = '! sbcl --load /usr/share/common-lisp/source/slime/start
 au BufRead /tmp/mutt-* set tw=72
 
 " markdown
-au BufRead,BufNewFile *.markdown,*.md setlocal spell textwidth=80
+au BufRead,BufNewFile *.markdown,*.md,*.txt setlocal spell textwidth=80
 
 " Git commits
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
