@@ -1,11 +1,12 @@
 #!/bin/bash
 
 base_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo ${base_dir}
 roamer_backup_dir=${HOME}/.roamer_backups
 _date=$(date +%s)
 initial_wp=RCkQyvn.jpg
 declare -a apt_packages=(git mercurial golang python-pip build-essential htop dzen2 tmux
-    feh xautolock xmonad xmobar xorg feh)
+    feh xautolock xmonad xmobar xorg feh rxvt-unicode-256color)
 declare -a pip_packages=(virtualenvwrapper udiskie beets)
 manifest=${1}
 
@@ -31,8 +32,9 @@ do
             rm "${file_destination_full}"
         fi
     fi
-    echo "==> Linking ${file_source} -> ${file_destination_full}"
-    ln -s "${file_source}" "${file_destination_full}"
+    echo "==> Linking ${file_source_full} -> ${file_destination_full}"
+    rm "${file_destination_full}"
+    ln -s "${file_source_full}" "${file_destination_full}"
 done < "${manifest}"
 
 # Make sure ${HOME}/.conf.d exists
@@ -51,7 +53,8 @@ fi
 # Make sure ${HOME}/bin exists
 if [[ ! -f ${HOME}/bin ]]; then
     echo "==> Creating ${HOME}/bin"
-    cp -r "${base_dir}/bin ${HOME}"
+    mkdir -p "${HOME}/bin"
+    cp -r "${base_dir}/bin/* ${HOME}/bin/"
 fi
 
 if [[ -d ${base_dir}/install_hooks.d ]]; then
@@ -71,6 +74,8 @@ if [[ -f /etc/debian_version ]]; then
     sudo apt-get update
     sudo apt-get install -y "${apt_packages[@]}"
     sudo pip install "${pip_packages[@]}"
-    echo "==> Setting wallpaper"
-    feh --bg-scale "${HOME}/.wallpaper/${initial_wp}"
+    if [[ -f "${HOME}/.wallpaper/${initial_wp}" ]]; then
+        echo "==> Setting wallpaper"
+        feh --bg-scale "${HOME}/.wallpaper/${initial_wp}"
+    fi
 fi
