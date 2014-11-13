@@ -1,6 +1,7 @@
 Config { font = "xft:Terminus:pixelsize=14:antialias=true"
-        , bgColor = "#2c2c2c"
-        , fgColor = "#657b83"
+        -- , bgColor = "#2c2c2c"
+        , bgColor = "#070B0B"
+        , fgColor = "#7B7B7B"
         , border = NoBorder
         , borderColor = "black"
         , hideOnStart = False
@@ -26,5 +27,5 @@ Config { font = "xft:Terminus:pixelsize=14:antialias=true"
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% }{ %mpd% | %default:Master% | %cpu% | %memory% | %battery% | %KPDX% | <fc=#ee9a00>%date%</fc>"
+        , template = "%StdinReader% }{ %mpd% | %default:Master% | %cpu% | %memory% | %battery% | %KPDX% | <fc=#F0412E>%date%</fc>"
        }

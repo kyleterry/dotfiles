@@ -56,14 +56,15 @@ myLayoutHook = avoidStruts
         gamesLayout = noBorders $ Full
 
 -- Workspace colors
-myCurrentWSColor = "#e6744c" -- color of active workspace
+myCurrentWSColor = "#F0412E" -- color of active workspace
 -- myCurrentWSColor = "#652DC1" -- color of active workspace
-myVisibleWSColor = "#c185a7" -- color of inactive workspace
+myVisibleWSColor = "#7B7B7B" -- color of inactive workspace
 myUrgentWSColor = "#cc0000" -- color of workspace with 'urgent' window
 myUrgentWSLeft = "{" -- wrap urgent workspace with these
 myUrgentWSRight = "}"
 
 myFocusedBorderColor = "#652DC1"
+myNormalBorderColor = "#372D2C"
 
 startupWorkspace = "code"
 
@@ -90,6 +91,7 @@ main = do
         workspaces  = myWorkspaces,
         manageHook  = manageDocks <+> myManagehook <+> manageHook defaultConfig,
         focusedBorderColor = myFocusedBorderColor,
+        normalBorderColor = myNormalBorderColor,
         modMask     = myModMask,
         logHook     = myLogHook xmproc,
         layoutHook  = myLayoutHook,
