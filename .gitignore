@@ -2,3 +2,4 @@
 *.swo
 .netrwhist
 _ncmpcpp/*.log
+_ncmpcpp/artists/
