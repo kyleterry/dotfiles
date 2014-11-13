@@ -9,5 +9,5 @@ xmodmap ~/.Xmodmap
 xrdb -load ${HOME}/.Xresources
 xset fp rehash
 xsetroot -cursor_name  left_ptr
-udiskie &
+/usr/local/bin/udiskie &
 exec dbus-run-session -- xmonad

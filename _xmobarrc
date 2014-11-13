@@ -1,4 +1,4 @@
-Config { font = "xft:Terminus:pixelsize=12:antialias=true"
+Config { font = "xft:Terminus:pixelsize=14:antialias=true"
         , bgColor = "#2c2c2c"
         , fgColor = "#657b83"
         , border = NoBorder
@@ -16,7 +16,7 @@ Config { font = "xft:Terminus:pixelsize=12:antialias=true"
                         , Run Date "%a %b %_d %H:%M" "date" 10
                         , Run Volume "default" "Master" [] 10
                         , Run StdinReader
-                        , Run BatteryP ["BAT0"]
+                        , Run BatteryP ["BAT0", "BAT1"]
                                     ["-t", "<acstatus> <left>%",
                                     "-L", "10", "-H", "80", "-p", "3",
                                     "--", "-O", "<fc=green>On</fc> - ", "-i", "",

@@ -57,10 +57,13 @@ myLayoutHook = avoidStruts
 
 -- Workspace colors
 myCurrentWSColor = "#e6744c" -- color of active workspace
+-- myCurrentWSColor = "#652DC1" -- color of active workspace
 myVisibleWSColor = "#c185a7" -- color of inactive workspace
 myUrgentWSColor = "#cc0000" -- color of workspace with 'urgent' window
 myUrgentWSLeft = "{" -- wrap urgent workspace with these
 myUrgentWSRight = "}"
+
+myFocusedBorderColor = "#652DC1"
 
 startupWorkspace = "code"
 
@@ -69,12 +72,14 @@ startupWorkspace = "code"
 keysToAdd x =
     [ ((modMask x .|. controlMask, xK_l), spawn "slock")
     , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle")
-    , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2+")
-    , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 2-")
+    , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2000+")
+    , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 2000-")
     , ((0, xF86XK_AudioNext), spawn "ncmpcpp next")
     , ((0, xF86XK_AudioPrev), spawn "ncmpcpp prev")
     , ((0, xF86XK_AudioPlay), spawn "ncmpcpp toggle")
     , ((0, xF86XK_AudioStop), spawn "ncmpcpp stop")
+    , ((0, xF86XK_MonBrightnessUp), spawn "xbacklight -inc 10%")
+    , ((0, xF86XK_MonBrightnessDown), spawn "xbacklight -dec 10%")
     , ((0, xK_Print), spawn "scrot '%Y-%m-%d_$wx$h.png'")
     ]
 myKeys x = M.union (keys defaultConfig x) (M.fromList (keysToAdd x))
@@ -84,6 +89,7 @@ main = do
         terminal    = myTerminal,
         workspaces  = myWorkspaces,
         manageHook  = manageDocks <+> myManagehook <+> manageHook defaultConfig,
+        focusedBorderColor = myFocusedBorderColor,
         modMask     = myModMask,
         logHook     = myLogHook xmproc,
         layoutHook  = myLayoutHook,
