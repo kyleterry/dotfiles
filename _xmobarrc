@@ -16,6 +16,7 @@ Config { font = "xft:Terminus:pixelsize=14:antialias=true"
                         , Run Memory ["-t","Mem: <usedratio>%"] 10
                         , Run Date "%a %b %_d %H:%M" "date" 10
                         , Run Volume "default" "Master" [] 10
+                        , Run Wireless "wlan0" [] 10
                         , Run StdinReader
                         , Run BatteryP ["BAT0", "BAT1"]
                                     ["-t", "<acstatus> <left>%",
@@ -27,5 +28,5 @@ Config { font = "xft:Terminus:pixelsize=14:antialias=true"
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% }{ %mpd% | %default:Master% | %cpu% | %memory% | %battery% | %KPDX% | <fc=#F0412E>%date%</fc>"
+        , template = "%StdinReader% }{ %mpd% | %wlan0wi% | %default:Master% | %cpu% | %memory% | %battery% | %KPDX% | <fc=#F0412E>%date%</fc>"
        }

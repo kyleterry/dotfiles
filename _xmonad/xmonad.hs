@@ -15,7 +15,7 @@ import Graphics.X11.ExtraTypes.XF86
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
-myTerminal = "urxvt"
+myTerminal = "urxvtc"
 myModMask = mod4Mask
 myWorkspaces = ["main", "web", "code", "build", "docs", "games"] ++ map show [7..9]
 myManagehook = composeAll . concat $
