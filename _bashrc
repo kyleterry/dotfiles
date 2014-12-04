@@ -155,3 +155,5 @@ now() {
         echo $stamp - "$@" >> $file
     fi
 }
+
+[[ -s /home/kyle/.autojump/etc/profile.d/autojump.sh ]] && source /home/kyle/.autojump/etc/profile.d/autojump.sh

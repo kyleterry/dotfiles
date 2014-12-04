@@ -73,8 +73,8 @@ startupWorkspace = "code"
 keysToAdd x =
     [ ((modMask x .|. controlMask, xK_l), spawn "slock")
     , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle")
-    , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 4+")
-    , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 4-")
+    , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2000+")
+    , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 2000-")
     , ((0, xF86XK_AudioNext), spawn "ncmpcpp next")
     , ((0, xF86XK_AudioPrev), spawn "ncmpcpp prev")
     , ((0, xF86XK_AudioPlay), spawn "ncmpcpp toggle")
