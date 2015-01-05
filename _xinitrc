@@ -10,4 +10,5 @@ xrdb -load ${HOME}/.Xresources
 xset fp rehash
 xsetroot -cursor_name  left_ptr
 /usr/local/bin/udiskie &
+compton -b
 exec dbus-run-session -- xmonad

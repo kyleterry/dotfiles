@@ -31,6 +31,9 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 command! W :w
 cmap W! w !sudo tee % >/dev/null
 
+" completion
+set omnifunc=syntaxcomplete#Complete
+
 "searching
 set ignorecase " Default to using case insensitive searches,
 set smartcase " unless uppercase letters are used in the regex.
@@ -88,6 +91,7 @@ map <leader>nt :NERDTreeToggle<CR>
 
 " ack
 nmap <leader>a <Esc>:Ack!
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " powerline
 "let g:Powerline_symbols = 'fancy'
@@ -207,7 +211,6 @@ let g:tagbar_type_go = {
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 " ruby
-autocmd FileType ruby setlocal foldmethod=syntax
 
 " gpg
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>

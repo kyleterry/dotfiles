@@ -155,3 +155,5 @@ now() {
         echo $stamp - "$@" >> $file
     fi
 }
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

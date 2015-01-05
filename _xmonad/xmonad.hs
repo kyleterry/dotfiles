@@ -14,6 +14,7 @@ import System.IO
 import Graphics.X11.ExtraTypes.XF86
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
+import DocksFullscreen
 
 myTerminal = "urxvtc"
 myModMask = mod4Mask
@@ -86,7 +87,7 @@ keysToAdd x =
 myKeys x = M.union (keys defaultConfig x) (M.fromList (keysToAdd x))
 main = do
     xmproc <- spawnPipe "/home/kyle/.cabal/bin/xmobar"
-    xmonad $ withUrgencyHook NoUrgencyHook $ defaultConfig {
+    xmonad $ withUrgencyHook NoUrgencyHook $ docksFullscreenConfig $ defaultConfig {
         terminal    = myTerminal,
         workspaces  = myWorkspaces,
         manageHook  = manageDocks <+> myManagehook <+> manageHook defaultConfig,
