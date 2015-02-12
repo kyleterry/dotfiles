@@ -112,3 +112,6 @@
 [submodule "_vim/bundle/vimdeck"]
 	path = _vim/bundle/vimdeck
 	url = https://github.com/tybenz/vimdeck.git
+[submodule "_vim/bundle/vim-hackernews"]
+	path = _vim/bundle/vim-hackernews
+	url = https://github.com/ryanss/vim-hackernews.git

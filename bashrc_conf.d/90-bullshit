@@ -1,0 +1,5 @@
+#!/bin/bash
+alias htop='TERM=screen htop'
+alias irssi='TERM=screen irssi'
+alias mutt='TERM=screen mutt'
+alias ncmpcpp='TERM=screen ncmpcpp'
