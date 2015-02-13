@@ -1,0 +1,9 @@
+#!/bin/sh
+
+urxvtd -q -f -o &
+xautolock -time 5 -locker "${HOME}/.screenlock.sh" -detectsleep &
+eval $(cat ${HOME}/.fehbg)
+eval $(ssh-agent -t 5h)
+/usr/local/bin/udiskie &
+
+exec xmonad-session

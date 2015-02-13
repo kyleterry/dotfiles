@@ -118,3 +118,9 @@
 [submodule "_vim/bundle/rust"]
 	path = _vim/bundle/rust
 	url = https://github.com/wting/rust.vim.git
+[submodule "_vim/bundle/vim-hackernews"]
+	path = _vim/bundle/vim-hackernews
+	url = https://github.com/ryanss/vim-hackernews.git
+[submodule "_vim/bundle/coffee-script"]
+	path = _vim/bundle/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git

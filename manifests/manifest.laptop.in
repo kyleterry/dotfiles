@@ -7,6 +7,7 @@ _mutt=.mutt
 _ncmpcpp=.ncmpcpp
 _tmux.conf=.tmux.conf
 _xinitrc=.xinitrc
+_session=.session
 _Xmodmap=.Xmodmap
 _xmonad=.xmonad
 _xmobarrc=.xmobarrc

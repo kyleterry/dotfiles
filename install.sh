@@ -79,3 +79,8 @@ if [[ -f /etc/debian_version ]]; then
         feh --bg-scale "${HOME}/.wallpaper/${initial_wp}"
     fi
 fi
+
+echo "==> Installing Go packages..."
+go get -u github.com/jstemmer/gotags
+
+echo "Done!"

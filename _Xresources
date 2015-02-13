@@ -1,4 +1,5 @@
 ! vim: ft=xdefaults
+Xft.dpi: 96
 !*font: xft:Source Code Pro for Powerline:size=10:antialias=true:hinting=false:autohint=false
 *font: xft:DejaVu Sans Mono for Powerline:size=8:antialias=true:hinting=false:autohint=false
 !*font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=false:autohint=false

@@ -32,6 +32,9 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 command! W :w
 cmap W! w !sudo tee % >/dev/null
 
+" completion
+set omnifunc=syntaxcomplete#Complete
+
 "searching
 set ignorecase " Default to using case insensitive searches,
 set smartcase " unless uppercase letters are used in the regex.
@@ -215,10 +218,8 @@ autocmd FileType eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType haml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType coffee setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
-
 " python
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
-
 
 " gpg
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
