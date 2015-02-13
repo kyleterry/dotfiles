@@ -95,8 +95,7 @@ function make_prompt {
 
 PROMPT_COMMAND=make_prompt
 
-export PATH="~/.cabal/bin:~/bin:$PATH"
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/lib:$PATH
+export PATH=$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/lib:$PATH
 export EDITOR="vim"
 
 if [ -x /usr/bin/dircolors ]; then

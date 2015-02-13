@@ -5,6 +5,7 @@ let mapleader=","
 syntax on
 filetype plugin indent on
 filetype on
+set nocompatible
 set encoding=utf-8
 set t_Co=256
 set relativenumber
@@ -85,9 +86,11 @@ let g:ctrlp_custom_ignore = {
 
 " NERDtree
 map <leader>nt :NERDTreeToggle<CR>
+" let NERDTreeDirArrows=0
 
 " ack
 nmap <leader>a <Esc>:Ack!
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " powerline
 "let g:Powerline_symbols = 'fancy'
@@ -207,7 +210,15 @@ let g:tagbar_type_go = {
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 " ruby
-autocmd FileType ruby setlocal foldmethod=syntax
+autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType haml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType coffee setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+
+
+" python
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
+
 
 " gpg
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>

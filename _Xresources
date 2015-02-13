@@ -1,6 +1,6 @@
 ! vim: ft=xdefaults
-*font: xft:Source Code Pro for Powerline:size=10:antialias=true:hinting=false:autohint=false
-!*font: xft:DejaVu Sans Mono for Powerline:size=8:antialias=true:hinting=false:autohint=false
+!*font: xft:Source Code Pro for Powerline:size=10:antialias=true:hinting=false:autohint=false
+*font: xft:DejaVu Sans Mono for Powerline:size=8:antialias=true:hinting=false:autohint=false
 !*font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=false:autohint=false
 *boldFont:
 
@@ -8,7 +8,7 @@
 *background:  #000000
 
 URxvt.depth: 32
-URxvt*background: rgba:0000/0000/0000/cccc
+! URxvt*background: rgba:0000/0000/0000/cccc
 
 URxvt*letterSpace:  -1
 URxvt*fading:       10%
@@ -19,7 +19,7 @@ URxvt*urgentOnBell: true
 URxvt*visualBell:   false
 
 URxvt*perl-ext-common: default,matcher
-URxvt*url-launcher:    /usr/bin/firefox
+URxvt*url-launcher:    /usr/local/bin/firefox
 URxvt*matcher.button:  1
 
 !black

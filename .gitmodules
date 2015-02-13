@@ -112,3 +112,9 @@
 [submodule "_vim/bundle/vimdeck"]
 	path = _vim/bundle/vimdeck
 	url = https://github.com/tybenz/vimdeck.git
+[submodule "_vim/bundle/vim-ruby"]
+	path = _vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "_vim/bundle/rust"]
+	path = _vim/bundle/rust
+	url = https://github.com/wting/rust.vim.git
