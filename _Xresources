@@ -9,7 +9,7 @@ Xft.dpi: 96
 *background:  #000000
 
 URxvt.depth: 32
-URxvt*background: rgba:0000/0000/0000/cccc
+!URxvt*background: rgba:0000/0000/0000/cccc
 
 URxvt*letterSpace:  -1
 URxvt*fading:       10%
@@ -20,7 +20,7 @@ URxvt*urgentOnBell: true
 URxvt*visualBell:   false
 
 URxvt*perl-ext-common: default,matcher
-URxvt*url-launcher:    /usr/bin/firefox
+URxvt*url-launcher:    /usr/local/bin/firefox
 URxvt*matcher.button:  1
 
 !black

@@ -211,6 +211,10 @@ let g:tagbar_type_go = {
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 " ruby
+autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType haml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType coffee setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 " gpg
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
