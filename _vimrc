@@ -182,7 +182,7 @@ vnoremap < <<CR>gv
 " TODO
 
 " Go programming
-let g:go_fmt_autosave = 0
+"let g:go_fmt_autosave = 0
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
@@ -211,6 +211,7 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+let g:go_fmt_command = "goimports"
 
 " ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
