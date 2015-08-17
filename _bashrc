@@ -95,7 +95,7 @@ function make_prompt {
 
 PROMPT_COMMAND=make_prompt
 
-export PATH=$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/lib:$PATH
+export PATH=$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/lib:$(cope_path):$PATH
 export EDITOR="vim"
 
 if [ -x /usr/bin/dircolors ]; then
@@ -156,3 +156,5 @@ now() {
 }
 
 [[ -s /home/kyle/.autojump/etc/profile.d/autojump.sh ]] && source /home/kyle/.autojump/etc/profile.d/autojump.sh
+
+eval $(keychain -q --eval)

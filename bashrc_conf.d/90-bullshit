@@ -3,3 +3,9 @@ alias htop='TERM=screen htop'
 alias irssi='TERM=screen irssi'
 alias mutt='TERM=screen mutt'
 alias ncmpcpp='TERM=screen ncmpcpp'
+
+eval "$(beet completion)"
+
+updick() {
+    uptime | perl -nE '/p (\d+)/;say+8,"="x$1,D'
+}

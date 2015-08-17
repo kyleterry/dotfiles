@@ -90,6 +90,7 @@ let g:ctrlp_custom_ignore = {
 " NERDtree
 map <leader>nt :NERDTreeToggle<CR>
 " let NERDTreeDirArrows=0
+let NERDTreeIgnore = ['\.pyc$']
 
 " ack
 nmap <leader>a <Esc>:Ack!

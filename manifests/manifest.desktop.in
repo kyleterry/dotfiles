@@ -13,3 +13,4 @@ _Xresources=.Xresources
 _screenlock.sh=.screenlock.sh
 _wallpaper=.wallpaper
 _xinitrc=.xinitrc
+_config=.config

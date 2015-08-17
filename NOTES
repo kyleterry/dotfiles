@@ -3,3 +3,7 @@ Debian:
 
 XMonad:
     http://xmonad.org/xmonad-docs/xmonad-contrib/XMonad-Actions-DynamicWorkspaces.html -- this is pretty cool
+
+Using this for volume notifications
+    https://github.com/davidbrazdil/volnoti
+    - yaourt -S volnoti
