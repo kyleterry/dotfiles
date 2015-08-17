@@ -124,3 +124,12 @@
 [submodule "_vim/bundle/coffee-script"]
 	path = _vim/bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "_vim/bundle/csv.vim"]
+	path = _vim/bundle/csv.vim
+	url = https://github.com/chrisbra/csv.vim.git
+[submodule "_vim/bundle/vim-virtualenv"]
+	path = _vim/bundle/vim-virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule "_vim/bundle/moonscript-vim"]
+	path = _vim/bundle/moonscript-vim
+	url = https://github.com/leafo/moonscript-vim.git
