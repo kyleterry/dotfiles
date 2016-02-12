@@ -155,10 +155,7 @@ now() {
     fi
 }
 
-[[ -s /home/kyle/.autojump/etc/profile.d/autojump.sh ]] && source /home/kyle/.autojump/etc/profile.d/autojump.sh
-
 eval $(keychain --eval -q)
 
-#[[ -s /home/kyle/.autojump/etc/profile.d/autojump.sh ]] && source /home/kyle/.autojump/etc/profile.d/autojump.sh
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
