@@ -7,8 +7,4 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-export HOMEBREW_GITHUB_API_TOKEN=e32bcd23dea6e26d1ba4f8a6b99dd0aafb010bd0
-
-export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
-
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
