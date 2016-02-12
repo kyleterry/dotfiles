@@ -20,7 +20,7 @@ set listchars=trail:·,tab:»·,eol:$
 set ttyfast
 set term=screen-256color
 hi nontext ctermfg=7 guifg=gray
-colorscheme dawn
+"colorscheme 
 
 set guioptions-=L
 set guioptions-=R
