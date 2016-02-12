@@ -15,11 +15,15 @@ set title
 set pastetoggle=<F2>
 set confirm
 set list
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+"set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=trail:·,tab:»·,eol:$
 set ttyfast
 set term=screen-256color
-hi NonText ctermfg=7 guifg=gray
-colorscheme badwolf
+hi nontext ctermfg=7 guifg=gray
+colorscheme dawn
+
+set guioptions-=L
+set guioptions-=R
 
 " Directories for vim-created files
 set directory=~/.vimtmp
@@ -47,8 +51,14 @@ nnoremap <leader><space> :nohlsearch<cr> " hide the matches (:noh)
 set cursorline
 set cursorcolumn
 set colorcolumn=79
-highlight CursorColumn cterm=NONE
-highlight CursorLine cterm=NONE
+"highlight CursorColumn
+"highlight CursorLine
+hi CursorLine   cterm=NONE ctermbg=0 " ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=0 " ctermfg=white guibg=darkred guifg=white
+hi ColorColumn ctermbg=0
+hi NonText cterm=NONE ctermfg=0
+hi SpecialKey cterm=NONE ctermfg=0
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set ruler
 
 " editing
@@ -119,10 +129,10 @@ let g:airline_symbols.linenr = ''
 " unicode symbols
 " let g:airline_left_sep = ''
 " let g:airline_right_sep = ''
-" let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '␤'
 " let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.paste = '✹'
-" let g:airline_symbols.whitespace = '¶'
+let g:airline_symbols.paste = '✹'
+let g:airline_symbols.whitespace = '¶'
 " let g:airline_solarized_bg = 'light'
 
 let g:airline#extensions#tabline#enabled = 1
@@ -214,11 +224,7 @@ let g:tagbar_type_go = {
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 let g:go_fmt_command = "goimports"
 
-" ruby
-autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
-autocmd FileType eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
-autocmd FileType haml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
-autocmd FileType coffee setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType ruby,eruby,haml,yaml,coffee,js,javascript,html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 " python
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4

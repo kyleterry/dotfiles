@@ -133,3 +133,9 @@
 [submodule "_vim/bundle/moonscript-vim"]
 	path = _vim/bundle/moonscript-vim
 	url = https://github.com/leafo/moonscript-vim.git
+[submodule "_vim/bundle/vim-rubocop"]
+	path = _vim/bundle/vim-rubocop
+	url = https://github.com/ngmy/vim-rubocop.git
+[submodule "_vim/bundle/colorschemes"]
+	path = _vim/bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
