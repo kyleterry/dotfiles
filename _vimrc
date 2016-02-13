@@ -18,9 +18,30 @@ set list
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set listchars=trail:·,tab:»·,eol:$
 set ttyfast
-set term=screen-256color
-hi nontext ctermfg=7 guifg=gray
-colorscheme dawn
+"hi nontext ctermfg=0 guifg=gray
+let g:gitgutter_override_sign_column_highlight = 0
+set background=dark
+colorscheme base16-railscasts
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green ctermbg=236
+highlight GitGutterChange ctermfg=yellow ctermbg=236
+highlight GitGutterDelete ctermfg=red ctermbg=236
+highlight GitGutterChangeDelete ctermfg=yellow ctermbg=236
+highlight VertSplit    ctermbg=236
+highlight ColorColumn  ctermbg=236
+highlight LineNr       ctermbg=236 ctermfg=240
+highlight CursorLineNr ctermbg=236 ctermfg=240
+highlight CursorLine   ctermbg=236
+highlight CursorColumn   ctermbg=236
+highlight SignColumn ctermbg=236 ctermfg=240
+highlight StatusLineNC ctermbg=238 ctermfg=0
+highlight StatusLine   ctermbg=240 ctermfg=12
+highlight IncSearch    ctermbg=3   ctermfg=1
+highlight Search       ctermbg=1   ctermfg=3
+highlight Visual       ctermbg=3   ctermfg=0
+highlight Pmenu        ctermbg=240 ctermfg=12
+highlight PmenuSel     ctermbg=3   ctermfg=1
+highlight SpellBad     ctermbg=0   ctermfg=1
 
 set guioptions-=L
 set guioptions-=R
@@ -51,13 +72,12 @@ nnoremap <leader><space> :nohlsearch<cr> " hide the matches (:noh)
 set cursorline
 set cursorcolumn
 set colorcolumn=79
-"highlight CursorColumn
-"highlight CursorLine
-hi CursorLine   cterm=NONE ctermbg=0 " ctermfg=white guibg=darkred guifg=white
-hi CursorColumn cterm=NONE ctermbg=0 " ctermfg=white guibg=darkred guifg=white
-hi ColorColumn ctermbg=0
-hi NonText cterm=NONE ctermfg=0
-hi SpecialKey cterm=NONE ctermfg=0
+"hi CursorLine   cterm=NONE ctermbg=0
+"hi CursorColumn cterm=NONE ctermbg=0
+"hi ColorColumn ctermbg=0
+"hi NonText cterm=NONE ctermfg=0
+"hi SpecialKey cterm=NONE ctermfg=0
+"hi Folded cterm=NONE ctermbg=0
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set ruler
 
