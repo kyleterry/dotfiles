@@ -8,6 +8,7 @@ filetype on
 set nocompatible
 set encoding=utf-8
 set t_Co=256
+set term=screen-256color
 set relativenumber
 set number
 set numberwidth=1
