@@ -2,11 +2,15 @@
 Xft.dpi: 96
 !*font: xft:Source Code Pro for Powerline:size=10:antialias=true:hinting=false:autohint=false
 *font: xft:DejaVu Sans Mono for Powerline:size=10:antialias=true:hinting=false:autohint=false
+!*font: xft:FuraMono-Regular Powerline:size=10:antialias=true:hinting=false:autohint=false
 !*font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=false:autohint=false
 *boldFont:
 
-*foreground:  #dcdcdc
-*background:  #000000
+!*foreground:  #dcdcdc
+!*background:  #000000
+
+!*foreground:  #d1d4e0
+!*background:  #101218
 
 URxvt.depth: 32
 ! URxvt*background: rgba:0000/0000/0000/cccc
@@ -23,30 +27,58 @@ URxvt*perl-ext-common: default,matcher,font-size
 URxvt*url-launcher:    /usr/bin/google-chrome-stable
 URxvt*matcher.button:  1
 
-!black
-*color0: #222222
-*color8: #454545
-!red
-*color1: #9E5641
-*color9: #CC896D
-!green
-*color2: #6C7E55
-*color10: #7DB37D
-!yellow
-*color3: #CAAF2B
-*color11: #BFB556
-!blue
-*color4: #4c8ea1
-*color12: #6bc1d0
-!magenta
-*color5: #956D9D
-*color13: #C18FCB
-!cyan
-*color6: #7C9AA6
-*color14: #8FADBF
-!white
-*color7: #909090
-*color15: #FFFFFF
+!!black
+!*color0: #222222
+!*color8: #454545
+!!red
+!*color1: #9E5641
+!*color9: #CC896D
+!!green
+!*color2: #6C7E55
+!*color10: #7DB37D
+!!yellow
+!*color3: #CAAF2B
+!*color11: #BFB556
+!!blue
+!*color4: #4c8ea1
+!*color12: #6bc1d0
+!!magenta
+!*color5: #956D9D
+!*color13: #C18FCB
+!!cyan
+!*color6: #7C9AA6
+!*color14: #8FADBF
+!!white
+!*color7: #909090
+!*color15: #FFFFFF
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
 
 URxvt.keysym.C-Up:     font-size:increase
 URxvt.keysym.C-Down:   font-size:decrease

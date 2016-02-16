@@ -8,7 +8,7 @@ filetype on
 set nocompatible
 set encoding=utf-8
 set t_Co=256
-set term=screen-256color
+"set term=screen-256color
 set relativenumber
 set number
 set numberwidth=1
@@ -22,28 +22,27 @@ set ttyfast
 "hi nontext ctermfg=0 guifg=gray
 let g:gitgutter_override_sign_column_highlight = 0
 set background=dark
-"colorscheme base16-railscasts
 colorscheme gruvbox
-highlight clear SignColumn
-highlight GitGutterAdd ctermfg=green ctermbg=236
-highlight GitGutterChange ctermfg=yellow ctermbg=236
-highlight GitGutterDelete ctermfg=red ctermbg=236
-highlight GitGutterChangeDelete ctermfg=yellow ctermbg=236
-highlight VertSplit    ctermbg=236
-highlight ColorColumn  ctermbg=236
-highlight LineNr       ctermbg=236 ctermfg=240
-highlight CursorLineNr ctermbg=236 ctermfg=240
-highlight CursorLine   ctermbg=236
-highlight CursorColumn   ctermbg=236
-highlight SignColumn ctermbg=236 ctermfg=240
-highlight StatusLineNC ctermbg=238 ctermfg=0
-highlight StatusLine   ctermbg=240 ctermfg=12
-highlight IncSearch    ctermbg=3   ctermfg=1
-highlight Search       ctermbg=1   ctermfg=3
-highlight Visual       ctermbg=3   ctermfg=0
-highlight Pmenu        ctermbg=240 ctermfg=12
-highlight PmenuSel     ctermbg=3   ctermfg=1
-highlight SpellBad     ctermbg=0   ctermfg=1
+"highlight clear SignColumn
+"highlight GitGutterAdd ctermfg=green ctermbg=236
+"highlight GitGutterChange ctermfg=yellow ctermbg=236
+"highlight GitGutterDelete ctermfg=red ctermbg=236
+"highlight GitGutterChangeDelete ctermfg=yellow ctermbg=236
+"highlight VertSplit    ctermbg=236
+"highlight ColorColumn  ctermbg=236
+"highlight LineNr       ctermbg=236 ctermfg=240
+"highlight CursorLineNr ctermbg=236 ctermfg=240
+"highlight CursorLine   ctermbg=236
+"highlight CursorColumn   ctermbg=236
+"highlight SignColumn ctermbg=236 ctermfg=240
+"highlight StatusLineNC ctermbg=238 ctermfg=0
+"highlight StatusLine   ctermbg=240 ctermfg=12
+"highlight IncSearch    ctermbg=3   ctermfg=1
+"highlight Search       ctermbg=1   ctermfg=3
+"highlight Visual       ctermbg=3   ctermfg=0
+"highlight Pmenu        ctermbg=240 ctermfg=12
+"highlight PmenuSel     ctermbg=3   ctermfg=1
+"highlight SpellBad     ctermbg=0   ctermfg=1
 
 set guioptions-=L
 set guioptions-=R
@@ -128,18 +127,14 @@ let NERDTreeIgnore = ['\.pyc$']
 nmap <leader>a <Esc>:Ack!
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" powerline
-"let g:Powerline_symbols = 'fancy'
-
 " Airline settings
-
-"let g:airline_theme='luna'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
+let g:airline_theme='gruvbox'
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''

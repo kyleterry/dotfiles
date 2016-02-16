@@ -148,3 +148,9 @@
 [submodule "_vim/bundle/i3-vim-syntax"]
 	path = _vim/bundle/i3-vim-syntax
 	url = https://github.com/PotatoesMaster/i3-vim-syntax
+[submodule "_vim/bundle/vim-airline-themes"]
+	path = _vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "_vim/bundle/gruvbox"]
+	path = _vim/bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
