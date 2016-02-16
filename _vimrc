@@ -22,7 +22,8 @@ set ttyfast
 "hi nontext ctermfg=0 guifg=gray
 let g:gitgutter_override_sign_column_highlight = 0
 set background=dark
-colorscheme base16-railscasts
+"colorscheme base16-railscasts
+colorscheme gruvbox
 highlight clear SignColumn
 highlight GitGutterAdd ctermfg=green ctermbg=236
 highlight GitGutterChange ctermfg=yellow ctermbg=236
