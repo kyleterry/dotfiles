@@ -1,19 +1,13 @@
 ! vim: ft=xdefaults
 Xft.dpi: 96
 !*font: xft:Source Code Pro for Powerline:size=10:antialias=true:hinting=false:autohint=false
-*font: xft:DejaVu Sans Mono for Powerline:size=10:antialias=true:hinting=false:autohint=false
-!*font: xft:FuraMono-Regular Powerline:size=10:antialias=true:hinting=false:autohint=false
-!*font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=false:autohint=false
+*font: xft:DejaVu Sans Mono for Powerline:size=10:antialias=true:hinting=false:autohint=false,xft:Inconsolata\ for\ Powerline:pixelsize=12
+!*font: xft:Fira Mono for Powerline:size=10
+!:antialias=true:hinting=false:autohint=false
+!*font: xft:Inconsolata\ for\ Powerline:pixelsize=12:antialias=true:hinting=false:autohint=false
 *boldFont:
 
-!*foreground:  #dcdcdc
-!*background:  #000000
-
-!*foreground:  #d1d4e0
-!*background:  #101218
-
 URxvt.depth: 32
-! URxvt*background: rgba:0000/0000/0000/cccc
 
 URxvt*letterSpace:  -1
 URxvt*fading:       10%
@@ -27,30 +21,6 @@ URxvt*perl-ext-common: default,matcher,font-size
 URxvt*url-launcher:    /usr/bin/google-chrome-stable
 URxvt*matcher.button:  1
 
-!!black
-!*color0: #222222
-!*color8: #454545
-!!red
-!*color1: #9E5641
-!*color9: #CC896D
-!!green
-!*color2: #6C7E55
-!*color10: #7DB37D
-!!yellow
-!*color3: #CAAF2B
-!*color11: #BFB556
-!!blue
-!*color4: #4c8ea1
-!*color12: #6bc1d0
-!!magenta
-!*color5: #956D9D
-!*color13: #C18FCB
-!!cyan
-!*color6: #7C9AA6
-!*color14: #8FADBF
-!!white
-!*color7: #909090
-!*color15: #FFFFFF
 ! hard contrast: *background: #1d2021
 *background: #282828
 ! soft contrast: *background: #32302f
@@ -84,3 +54,24 @@ URxvt.keysym.C-Up:     font-size:increase
 URxvt.keysym.C-Down:   font-size:decrease
 URxvt.keysym.C-S-Up:   font-size:incglobal
 URxvt.keysym.C-S-Down: font-size:decglobal
+
+rofi.padding: 40
+rofi.width: 30
+rofi.lines: 5
+rofi.columns: 2
+!
+!rofi.bw: 10
+rofi.font: 'Ubuntu Mono' 12
+rofi.fuzzy: true
+rofi.hide-scrollbar: true
+rofi.separator-style: none
+!
+!rofi.color-enabled: true
+!! State:           'bg',        'fg',        'bgalt',     'hlbg',   'hlfg'
+!rofi.color-normal: argb:444444, _foreground, argb:444444, argb:444444, _color2
+!rofi.color-urgent: argb:444444, _foreground, argb:444444, argb:444444, _color2
+!rofi.color-active: argb:444444, _foreground, argb:444444, argb:444444, _color2
+!
+!!                  'background', 'border'
+!rofi.color-window: argb:EE444444, _color2
+!rofi.bg: argb:DD444444

@@ -66,30 +66,24 @@ function make_prompt {
     fi
 
     if [ ${VIRTUAL_ENV} ]; then
-        VE_NAME="${COLOR_CYAN}(`basename ${VIRTUAL_ENV}`)"
+        VE_NAME="${COLOR_CYAN}`basename ${VIRTUAL_ENV}` "
     else
         VE_NAME=''
     fi
 
-    VC_PROMPT=$(vcprompt)
+    VC_PROMPT=$(vcprompt -f "%n(%b)%u%m")
 
     TOGETHER="${VE_NAME}${VC_PROMPT}"
 
-    BOTTOM_BAR_LEFT="\n${COLOR_PURPLE}["
-    BOTTOM_BAR_RIGHT="${COLOR_PURPLE}]"
+    BOTTOM_BAR_RIGHT=" "
     if [ ${TOGETHER} ]; then
-        BOTTOM_BAR="${BOTTOM_BAR_LEFT} ${VE_NAME}${COLOR_RED}${VC_PROMPT} ${BOTTOM_BAR_RIGHT}"
+        BOTTOM_BAR="${VE_NAME}${COLOR_RED}${VC_PROMPT}${BOTTOM_BAR_RIGHT}"
     else
         BOTTOM_BAR=""
     fi
 
-    if [[ `pwd` =~ 'src' ]]; then
-        PS1="${COLOR_PURPLE}[ \! ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_NONE}"
-        PS2=" > "
-    else
-        PS1="${COLOR_PURPLE}[ \! ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_PURPLE}]${BOTTOM_BAR}\n${COLOR_CYAN}\$ ${COLOR_NONE}"
-        PS2=" > "
-    fi
+    PS1="${COLOR_PURPLE}[ \! ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${BOTTOM_BAR}${COLOR_PURPLE}]\n${COLOR_CYAN}\$ ${COLOR_NONE}"
+    PS2=" > "
 }
 
 
