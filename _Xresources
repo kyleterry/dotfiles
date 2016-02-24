@@ -10,7 +10,7 @@ Xft.dpi: 96
 URxvt.depth: 32
 
 URxvt*letterSpace:  -1
-URxvt*fading:       10%
+URxvt*fading:       5%
 URxvt*fadeColor:    grey
 URxvt*scrollBar:    false
 
