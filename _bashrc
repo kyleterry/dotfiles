@@ -65,24 +65,14 @@ function make_prompt {
         STATUS="${COLOR_RED}ERR ${EXITSTATUS}"
     fi
 
+    VE_NAME=''
     if [ ${VIRTUAL_ENV} ]; then
-        VE_NAME="${COLOR_CYAN}`basename ${VIRTUAL_ENV}` "
-    else
-        VE_NAME=''
+        VE_NAME="${COLOR_CYAN}(`basename ${VIRTUAL_ENV}`) "
     fi
 
     VC_PROMPT=$(vcprompt -f "%n(%b)%u%m")
 
-    TOGETHER="${VE_NAME}${VC_PROMPT}"
-
-    BOTTOM_BAR_RIGHT=" "
-    if [ ${TOGETHER} ]; then
-        BOTTOM_BAR="${VE_NAME}${COLOR_RED}${VC_PROMPT}${BOTTOM_BAR_RIGHT}"
-    else
-        BOTTOM_BAR=""
-    fi
-
-    PS1="${COLOR_PURPLE}[ \! ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${BOTTOM_BAR}${COLOR_PURPLE}]\n${COLOR_CYAN}\$ ${COLOR_NONE}"
+    PS1="${COLOR_PURPLE}[ \! ${STATUS} ${COLOR_GREEN}\u${COLOR_WHITE}@${COLOR_LPURPLE}\h${COLOR_WHITE}:${COLOR_BLUE}\w ${COLOR_YELLOW}${VE_NAME}${COLOR_RED}${VC_PROMPT}${COLOR_PURPLE} ]\n${COLOR_CYAN}\$ ${COLOR_NONE}"
     PS2=" > "
 }
 
