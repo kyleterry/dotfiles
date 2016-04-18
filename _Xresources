@@ -49,6 +49,13 @@ URxvt*matcher.button:  1
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
+URxvt.color167: #fb4934
+URxvt.color142: #b8bb26
+URxvt.color214: #fabd2f
+URxvt.color109: #83a598
+URxvt.color175: #d3869b
+URxvt.color108: #8ec07c
+URxvt.color208: #fe8019
 
 URxvt.keysym.C-Up:     font-size:increase
 URxvt.keysym.C-Down:   font-size:decrease
