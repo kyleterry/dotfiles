@@ -154,3 +154,6 @@
 [submodule "_vim/bundle/gruvbox"]
 	path = _vim/bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "_vim/bundle/commentary"]
+	path = _vim/bundle/commentary
+	url = https://github.com/tpope/vim-commentary

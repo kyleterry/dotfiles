@@ -26,6 +26,10 @@ let g:gitgutter_override_sign_column_highlight = 0
 set background=dark
 let g:gruvbox_italic=1
 colorscheme gruvbox
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+let t_ZH="[3m"
+let t_ZR="[23m"
 
 set guioptions-=L
 set guioptions-=R
