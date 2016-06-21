@@ -7,7 +7,7 @@ filetype plugin indent on
 filetype on
 set nocompatible
 set encoding=utf-8
-set t_Co=256
+"set t_Co=256
 "set term=screen-256color
 set relativenumber
 set number
@@ -67,7 +67,7 @@ set showmatch " Briefly jump to a paren once it's balanced
 set nowrap " don't wrap text
 set linebreak " don't wrap textin the middle of a word
 set autoindent " always set autoindenting on
-set smartindent " use smart indent if there is no indent file
+"set smartindent " use smart indent if there is no indent file
 set tabstop=4 " <tab> inserts 4 spaces
 set shiftwidth=4 " but an indent level is 2 spaces wide.
 set softtabstop=4 " <BS> over an autoindent deletes both spaces.

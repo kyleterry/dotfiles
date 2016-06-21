@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export TERM='xterm-256color'
+#export TERM='xterm-256color'
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -80,7 +80,7 @@ function make_prompt {
 PROMPT_COMMAND=make_prompt
 
 export PATH=$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/lib:$PATH
-export EDITOR="vim"
+export EDITOR="nvim"
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
