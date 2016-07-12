@@ -47,6 +47,7 @@ cmap W! w !sudo tee % >/dev/null
 
 " completion
 set omnifunc=syntaxcomplete#Complete
+let g:neocomplete#enable_at_startup = 1
 
 "searching
 set ignorecase " Default to using case insensitive searches,
