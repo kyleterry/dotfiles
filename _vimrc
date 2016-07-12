@@ -1,11 +1,11 @@
 let g:pathogen_disable = ["vim-sleuth", "sleuth"]
 call pathogen#infect()
+set nocompatible
 
 let mapleader=","
 syntax on
 filetype plugin indent on
 filetype on
-set nocompatible
 set encoding=utf-8
 "set t_Co=256
 "set term=screen-256color
