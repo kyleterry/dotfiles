@@ -80,7 +80,7 @@ function make_prompt {
 PROMPT_COMMAND=make_prompt
 
 export PATH=$HOME/.cabal/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/lib:$PATH
-export EDITOR="nvim"
+export EDITOR="vim"
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"

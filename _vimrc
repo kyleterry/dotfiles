@@ -192,7 +192,6 @@ vnoremap < <<CR>gv
 " TODO
 
 " Go programming
-"let g:go_fmt_autosave = 0
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
@@ -222,11 +221,16 @@ let g:tagbar_type_go = {
 \ }
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 let g:go_fmt_command = "goimports"
+let g:syntastic_go_checkers = ['go']
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
+"sql
+au FileType sql nmap <leader>sf :SQLUFormatStmts<CR>
+
+" ruby
 autocmd FileType ruby,eruby,haml,yaml,coffee,js,javascript,html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 " python

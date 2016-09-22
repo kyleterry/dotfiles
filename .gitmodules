@@ -160,3 +160,9 @@
 [submodule "_vim/bundle/neocomplete"]
 	path = _vim/bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule "_vim/bundle/sqlutilities"]
+	path = _vim/bundle/sqlutilities
+	url = https://github.com/vim-scripts/SQLUtilities.git
+[submodule "_vim/bundle/align"]
+	path = _vim/bundle/align
+	url = https://github.com/vim-scripts/Align.git
