@@ -231,7 +231,7 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType sql nmap <leader>sf :SQLUFormatStmts<CR>
 
 " ruby
-autocmd FileType ruby,eruby,haml,yaml,coffee,js,javascript,html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType json,ruby,eruby,haml,yaml,coffee,js,javascript,html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 " python
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4

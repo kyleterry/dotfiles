@@ -166,3 +166,9 @@
 [submodule "_vim/bundle/align"]
 	path = _vim/bundle/align
 	url = https://github.com/vim-scripts/Align.git
+[submodule "_vim/bundle/vim-wakatime"]
+	path = _vim/bundle/vim-wakatime
+	url = git://github.com/wakatime/vim-wakatime.git
+[submodule "_vim/bundle/dash.vim"]
+	path = _vim/bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
