@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export DOCKER_BUILD_HOST=127.0.0.1

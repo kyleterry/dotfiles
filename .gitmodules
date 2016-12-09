@@ -172,3 +172,6 @@
 [submodule "_vim/bundle/dash.vim"]
 	path = _vim/bundle/dash.vim
 	url = https://github.com/rizzatti/dash.vim.git
+[submodule "_vim/bundle/vim-json"]
+	path = _vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
