@@ -175,3 +175,6 @@
 [submodule "_vim/bundle/vim-json"]
 	path = _vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "_vim/bundle/vim-puppet"]
+	path = _vim/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
