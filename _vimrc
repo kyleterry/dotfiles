@@ -182,6 +182,10 @@ au BufRead /tmp/mutt-* set tw=72
 " markdown
 au BufRead,BufNewFile *.markdown,*.md,*.txt setlocal spell textwidth=80
 
+" scratchpad (set spell and autosave)
+au BufRead,BufNewFile *.scratch setlocal spell textwidth=80
+au BufRead,BufNewFile *.scratch let g:auto_save = 1
+
 " Git commits
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
 

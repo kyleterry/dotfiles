@@ -178,3 +178,6 @@
 [submodule "_vim/bundle/vim-puppet"]
 	path = _vim/bundle/vim-puppet
 	url = https://github.com/rodjek/vim-puppet.git
+[submodule "_vim/bundle/vim-auto-save"]
+	path = _vim/bundle/vim-auto-save
+	url = https://github.com/vim-scripts/vim-auto-save
