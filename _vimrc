@@ -157,7 +157,7 @@ map <c-h> <c-w>h
 
 " Tagbar
 nmap <leader>tb :TagbarToggle<CR>
-nmap <leader>tf :TagbarFocusBuffer<CR>
+nmap <leader>tf :TagbarOpen j<CR>
 
 " pyflakes
 let g:pyflakes_use_quickfix = 0
