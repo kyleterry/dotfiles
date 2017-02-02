@@ -226,7 +226,7 @@ let g:tagbar_type_go = {
 \ }
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 let g:go_fmt_command = "goimports"
-let g:syntastic_go_checkers = ['go']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
