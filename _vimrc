@@ -182,6 +182,10 @@ au BufRead /tmp/mutt-* set tw=72
 " markdown
 au BufRead,BufNewFile *.markdown,*.md,*.txt setlocal spell textwidth=80
 
+" scratchpad (set spell and autosave)
+au BufRead,BufNewFile *.scratch setlocal spell textwidth=80
+au BufRead,BufNewFile *.scratch let g:auto_save = 1
+
 " Git commits
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
 
@@ -222,7 +226,7 @@ let g:tagbar_type_go = {
 \ }
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 let g:go_fmt_command = "goimports"
-let g:syntastic_go_checkers = ['go']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
