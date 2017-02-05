@@ -6,6 +6,7 @@ _gitconfig=.gitconfig
 _mutt=.mutt
 _ncmpcpp=.ncmpcpp
 _tmux.conf=.tmux.conf
+_terminfo=.terminfo
 _Xmodmap=.Xmodmap
 _xmonad=.xmonad
 _xmobarrc=.xmobarrc
