@@ -88,9 +88,6 @@
 [submodule "_vim/bundle/go"]
 	path = _vim/bundle/go
 	url = https://github.com/fatih/vim-go.git
-[submodule "_vim/bundle/vim-plugins"]
-	path = _vim/bundle/vim-plugins
-	url = https://github.com/WolfgangMehner/vim-plugins.git
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
