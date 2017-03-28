@@ -1,4 +1,6 @@
 #!/bin/bash
+# set -x
+# PS4='+\t '
 
 #export TERM='xterm-256color'
 

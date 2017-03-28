@@ -175,3 +175,6 @@
 [submodule "_vim/bundle/vim-auto-save"]
 	path = _vim/bundle/vim-auto-save
 	url = https://github.com/vim-scripts/vim-auto-save
+[submodule "_vim/bundle/visincr"]
+	path = _vim/bundle/visincr
+	url = https://github.com/vim-scripts/VisIncr

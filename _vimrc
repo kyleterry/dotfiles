@@ -104,6 +104,7 @@ let g:ctrlp_custom_ignore = {
 map <leader>nt :NERDTreeToggle<CR>
 " let NERDTreeDirArrows=0
 let NERDTreeIgnore = ['\.pyc$']
+nmap <leader>nn :NERDTreeFocus<CR>
 
 " ack
 nmap <leader>a <Esc>:Ack!
@@ -243,6 +244,9 @@ autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 
 " gpg
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
+
+" csv
+let g:csv_delim=','
 
 " based on:
 " http://vim.1045645.n5.nabble.com/editing-Python-files-how-to-keep-track-of-class-membership-td1189290.html
