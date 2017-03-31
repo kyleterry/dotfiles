@@ -248,6 +248,10 @@ command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
 " csv
 let g:csv_delim=','
 
+" snippets
+imap <C-\> <Plug>snipMateNextOrTrigger
+smap <C-\> <Plug>snipMateNextOrTrigger
+
 " based on:
 " http://vim.1045645.n5.nabble.com/editing-Python-files-how-to-keep-track-of-class-membership-td1189290.html
 
