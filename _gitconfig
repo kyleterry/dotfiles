@@ -60,3 +60,5 @@
   insteadOf = https://github.com/
 [commit]
 	gpgsign = true
+[ghi]
+	token = !security find-internet-password -a kyleterry -s github.com -l 'ghi token' -w

@@ -233,11 +233,11 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
-"sql
+" sql
 au FileType sql nmap <leader>sf :SQLUFormatStmts<CR>
 
-" ruby
-autocmd FileType json,ruby,eruby,haml,yaml,coffee,js,javascript,html,gitconfig setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+" ruby, html, json and stuff
+autocmd FileType json,ruby,eruby,haml,yaml,coffee,js,javascript,html,css,sass,gitconfig setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 " python
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
